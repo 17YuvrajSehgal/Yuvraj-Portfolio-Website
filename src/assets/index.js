@@ -1,6 +1,6 @@
 // Import company logos
-import mathwork from "./company/mathwork.png";
-import edunet from "./company/edunet.png";
+import brocku from "./company/brock.png";
+import scotiabank from "./company/scotiabank.png";
 import eduskill from "./company/eduskill.png";
 
 // Import tech stack images
@@ -34,8 +34,8 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 export {
-  mathwork,
-  edunet,
+  brocku,
+  scotiabank,
   python,
   c,
   cpp,
