@@ -56,12 +56,6 @@ const About = () => {
                 ))}
             </div>
 
-
-            <div className="mt-20 flex flex-wrap gap-10">
-                {frameworks.map((framework, index) => (
-                    <ServiceCard key={framework.title} index={index} {...framework} />
-                ))}
-            </div>
         </>
     );
 };
