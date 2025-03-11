@@ -130,7 +130,7 @@ export const projects = [
       { name: "Python", color: "pink-text-gradient" },
     ],
     image: mhft,
-    source_code_link: "https://github.com/17YuvrajSehgal",
+    source_code_link: "https://github.com/17YuvrajSehgal/stock_prediction_using_ANN",
   },
   {
     name: "News App - Android",
@@ -143,7 +143,7 @@ export const projects = [
       { name: "SQLite", color: "pink-text-gradient" },
     ],
     image: CompileVortex,
-    source_code_link: "https://github.com/17YuvrajSehgal",
+    source_code_link: "https://github.com/17YuvrajSehgal/NewsHub",
   },
   {
     name: "AI Powered Web Summary Tool",
@@ -155,7 +155,7 @@ export const projects = [
       { name: "Java", color: "pink-text-gradient" },
     ],
     image: weatherpedia,
-    source_code_link: "https://github.com/17YuvrajSehgal",
+    source_code_link: "https://github.com/17YuvrajSehgal/COSC-4P02-PROJECT",
   },
   {
     name: "Stock Market Prediction - Genetic Programming",
@@ -167,7 +167,7 @@ export const projects = [
       { name: "Regression", color: "pink-text-gradient" },
     ],
     image: mhft,
-    source_code_link: "https://github.com/17YuvrajSehgal",
+    source_code_link: "https://github.com/17YuvrajSehgal/Stock-Price-Prediction-Using-GP",
   },
   {
     name: "Village War Game",
@@ -180,6 +180,6 @@ export const projects = [
       { name: "OOP", color: "pink-text-gradient" },
     ],
     image: termpw,
-    source_code_link: "https://github.com/17YuvrajSehgal",
+    source_code_link: "https://github.com/17YuvrajSehgal/VillageWar",
   },
 ];
