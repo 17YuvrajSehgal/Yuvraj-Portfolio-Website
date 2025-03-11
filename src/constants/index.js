@@ -19,7 +19,7 @@ import {
   sketcher,
   brocku,
   CompileVortex,
-  mengalo,
+  mengalo, langchain, spring,
 } from "../assets";
 
 export const navLinks = [
@@ -38,10 +38,14 @@ export const navLinks = [
 ];
 
 export const services = [
-  { title: "C", icon: c },
-  { title: "C++", icon: cpp },
-  { title: "Python", icon: python },
   { title: "Java", icon: java },
+  { title: "Python", icon: python },
+  { title: "JavaScript", icon: javascript },
+];
+
+export const frameworks = [
+  { title: "Spring", icon: spring },
+  { title: "Langchain", icon: langchain },
 ];
 
 export const technologies = [

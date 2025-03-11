@@ -5,6 +5,8 @@ import mengalo from "./company/mengalo.png";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
+import langchain from "./tech-stack/langchain.png";
+import spring from "./tech-stack/spring.png";
 import c from "./tech-stack/c.png";
 import cpp from "./tech-stack/cpp.png";
 import java from "./tech-stack/java.png";
@@ -39,6 +41,8 @@ export {
   python,
   c,
   cpp,
+  langchain,
+  spring,
   java,
   github,
   css,
