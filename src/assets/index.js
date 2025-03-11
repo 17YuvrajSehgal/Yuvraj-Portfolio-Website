@@ -1,7 +1,7 @@
 // Import company logos
 import brocku from "./company/brock.png";
 import scotiabank from "./company/scotiabank.png";
-import eduskill from "./company/eduskill.png";
+import mengalo from "./company/mengalo.png";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
@@ -58,5 +58,5 @@ export {
   logo,
   menu,
   close,
-  eduskill,
+  mengalo,
 };

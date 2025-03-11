@@ -19,7 +19,7 @@ import {
   sketcher,
   brocku,
   CompileVortex,
-  eduskill,
+  mengalo,
 } from "../assets";
 
 export const navLinks = [
@@ -57,38 +57,64 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "AI/ML Intern",
-    company_name: "EduSkill Foundation | AWS Academy | AICTE",
-    icon: eduskill,
+    title: "AI Developer",
+    company_name: "Mengalo",
+    icon: mengalo,
     iconBg: "#161329",
-    date: "Sep 2023 - Nov 2023",
+    date: "Aug 2024 - Present",
     points: [
-      "Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.",
-      "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
+      "Built a full-stack AI inbox for automated message generation powered with agentic AI using Python's Fast API and React.",
+      "Utilized artificial intelligence for real-time data analytics using LLM RAG Chatbot with Python, LangChain, and Neo4j.",
+      "Designed a database schema and an automated pipeline for cleaning and transforming data from a PostgreSQL relational database to a Neo4j graph database.",
+      "Implemented code reviews, secure coding practices, git management, and agile methodologies, promoting productivity and code quality in startup environment.",
+      "Collaborated with software development teams, product managers, and client stakeholders to identify improvements and new features for existing products.",
     ],
   },
   {
-    title: "Mathwork Ai Virtual Intern",
-    company_name: "Mathwork | AICTE",
+    title: "Research Assistant",
+    company_name: "Brock University",
     icon: brocku,
     iconBg: "#161329",
-    date: "May 2023 - Sep 2023",
+    date: "Jan 2024 - Dec 2024",
     points: [
-      "Completed virtual internship, gaining a strong foundation in MATLAB, including data analysis and processing.",
-      "Acquired practical skills in image and signal processing, including segmentation, batch processing, and spectral analysis.",
-      "Developed expertise in machine learning models for clustering, classification, and regression, and customized deep learning techniques for image classification.",
+      "Received prestigious Match of Minds Scholarship for exceptional academic performance and research potential, as sole recipient in the department.",
+      "Created an open-source dataset of over 2,000 research artifacts, promoting collaboration and accessibility; projected to improve research efficiency by 30%, accelerating discovery and innovation.",
+      "Conducted empirical research with Professor to evaluate capability of generative AI in evaluating software artifacts for 40 conferences.",
+      "Designed an Artifact Documentation tool with advanced OOPs in Python and OpenAI and Neo4j, analyzing conference acceptance probabilities with AI, decreasing documentation time by 90%.",
     ],
   },
   {
-    title: "Artificial Intelligence Intern",
-    company_name: "Edunet Foundation | IBM SkillsBuild | AICTE",
+    title: "Automation Engineer Coop",
+    company_name: "Scotiabank",
     icon: scotiabank,
     iconBg: "#161329",
-    date: "June 2023 - July 2023",
+    date: "May 2024 - Aug 2024",
     points: [
-      "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
-      "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
-      "Leveraged 12 regression algorithms to attain precise outcomes in analyzing and predicting mental fitness levels across 150+ countries.",
+      "Learned Android automation and built automation for 20 test case scenarios using Java, Selenium, and Appium, reducing testing time by over 75% within four months.",
+      "Developed a Java package with advanced OOPs concepts to manage boilerplate code for Android automation, maximizing reusability and saving time for future testing efforts.",
+      "Collaborated with the business quality assurance team to design test case scenarios aligning with business requirements.",
+      "Integrated a reporting module leveraging HTML/CSS to generate comprehensive test reports for each test case, to cut down the validation time by 50%.",
+    ],
+  },
+  {
+    title: "Full Stack Developer Coop",
+    company_name: "Scotiabank",
+    icon: scotiabank,
+    iconBg: "#161329",
+    date: "May 2023 - Aug 2023",
+    points: [
+      "Delivered a comprehensive test suite in Java JUnit and Karma for the LMS website, increasing test coverage by 15% and ensuring compliance with the bank's 85% minimum coverage mandate.",
+      "Collaborated with another department to improvise an automation script written in Python; extended its functionality reducing manual file management time by 20%.",
+    ],
+  },
+  {
+    title: "Automation Engineer Coop",
+    company_name: "Scotiabank",
+    icon: scotiabank,
+    iconBg: "#161329",
+    date: "Sep 2022 - Dec 2022",
+    points: [
+      "Automated web testing regression test suites utilizing Selenium and Cucumber BDD in Java, integrating with the bank's automation framework and reduced testing time by 70%.",
     ],
   },
 ];
