@@ -40,11 +40,14 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a Computer Science student at SRM University and multilingual speaker with a passion
-        for ethical hacking, artificial intelligence, and neural language processing. I am looking
-        to join a company that values innovation, collaboration, and continuous learning and am
-        confident that my enthusiasm and drive will help me succeed in any role that leverages my
-        passion for technology.
+        As a Computer Science student specializing in Intelligent Systems at Brock University with an 87% GPA, 
+        I combine academic excellence with practical expertise in AI development and software engineering. 
+        Currently working as an AI Developer at Mengalo and previously at Scotiabank, I've delivered impactful 
+        solutions that reduced testing time by 75% and improved efficiency by 90% through AI-powered tools. 
+        My technical stack includes Java, Python, JavaScript, and various modern frameworks, complemented by 
+        extensive experience in both SQL and NoSQL databases. As a Match of Minds Scholarship recipient, 
+        I bring a proven track record in AI/ML development, automation engineering, and innovative research 
+        in computer science.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
