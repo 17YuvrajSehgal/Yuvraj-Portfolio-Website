@@ -39,27 +39,22 @@ export const navLinks = [
     },
 ];
 
-export const services = [
-    {title: "Java", icon: java},
-    {title: "Python", icon: python},
-    {title: "JavaScript", icon: javascript},
-];
-
 export const frameworks = [
     {title: "Spring", icon: spring},
     {title: "Langchain", icon: langchain},
 ];
 
 export const technologies = [
-    {name: "langchain", icon: langchain},
+    {name: "Java", icon: java},
+    {name: "Python", icon: python},
+    {name: "JavaScript", icon: javascript},
     {name: "HTML 5", icon: html},
     {name: "CSS 3", icon: css},
-    // {name: "JavaScript", icon: javascript},
-    {name: "Rect JS", icon: reactjs},
-    {name: "Selenium CSS", icon: selenium},
+    {name: "React JS", icon: reactjs},
+    {name: "Selenium", icon: selenium},
     {name: "Node JS", icon: nodejs},
     {name: "Cucumber", icon: cucumber},
-    {name: "git", icon: git},
+    {name: "Git", icon: git},
     {name: "SQL", icon: sql},
     {name: "Neo4J", icon: noe4j},
     {name: "Spring", icon: spring},

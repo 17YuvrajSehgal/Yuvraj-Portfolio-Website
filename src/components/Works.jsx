@@ -23,13 +23,13 @@ const ProjectCard = ({name, description, tags, image, source_code_link}) => {
                     scale: 1,
                     speed: 450,
                 }}
-                className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full transition-all duration-300 hover:shadow-card hover:scale-105"
+                className="bg-tertiary p-5 rounded-2xl sm:w-[320px] w-full h-[450px] transition-all duration-300 hover:shadow-card hover:scale-105"
             >
                 <div
-                    className="relative w-full cursor-pointer"
+                    className="relative w-full h-full flex flex-col cursor-pointer"
                     onClick={handleClick}
                 >
-                    <div className="relative w-full h-[230px]">
+                    <div className="relative w-full h-[200px] flex-shrink-0">
                         <img
                             src={image}
                             alt="project_image"
@@ -47,13 +47,13 @@ const ProjectCard = ({name, description, tags, image, source_code_link}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-5">
-                        <h3 className="text-white font-bold text-[24px] hover:text-[#915eff] transition-colors cursor-pointer">
+                    <div className="mt-5 flex-grow">
+                        <h3 className="text-white font-bold text-[20px] hover:text-[#915eff] transition-colors cursor-pointer truncate">
                             {name}
                         </h3>
-                        <p className="mt-2 text-secondary text-[14px]">{description}</p>
+                        <p className="mt-2 text-secondary text-[14px] line-clamp-4">{description}</p>
                     </div>
-                    <div className="mt-4 flex flex-wrap gap-2">
+                    <div className="mt-4 flex flex-wrap gap-2 flex-shrink-0">
                         {tags.map((tag) => (
                             <p key={tag.name} className={`text-[14px] ${tag.color}`}>
                                 #{tag.name}
@@ -81,7 +81,7 @@ const Works = () => {
                     repositories in it.
                 </motion.p>
             </div>
-            <div className="mt-20 flex flex-wrap gap-7">
+            <div className="mt-20 flex flex-wrap justify-center gap-7">
                 {projects.map((project, index) => (
                     <ProjectCard key={`project-${index}`} {...project} />
                 ))}
