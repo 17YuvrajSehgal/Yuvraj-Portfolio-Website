@@ -47,7 +47,7 @@ mindmap
 
 ## 🚀 Demo
 
-Experience the live portfolio at [[https://portfolio-lohit.vercel.app](https://17yuvrajsehgal.github.io/Yuvraj-Portfolio-Website/)](https://17yuvrajsehgal.github.io/Yuvraj-Portfolio-Website/)
+Experience the live portfolio at [(https://17yuvrajsehgal.github.io/Yuvraj-Portfolio-Website/)](https://17yuvrajsehgal.github.io/Yuvraj-Portfolio-Website/)
 
 ## 🛠️ Installation
 
