@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { close, logo, menu } from '../assets';
 import { navLinks } from '../constants';
 import { styles } from '../styles';
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -17,14 +18,48 @@ const Navbar = () => {
     window.open(resumeUrl);
   };
 
+  const socialLinks = [
+    {
+      url: 'https://ca.linkedin.com/in/yuvraj-sehgal',
+      icon: FaLinkedin,
+      label: 'LinkedIn'
+    },
+    {
+      url: 'https://github.com/17YuvrajSehgal',
+      icon: FaGithub,
+      label: 'GitHub'
+    },
+    {
+      url: 'https://www.instagram.com/17yuvrajsehgal/',
+      icon: FaInstagram,
+      label: 'Instagram'
+    }
+  ];
+
   useEffect(() => {
     if (toggle) {
       setActive('');
     }
   }, [toggle]);
 
+  const renderSocialLinks = (isSecondary) => (
+    <div className="flex gap-4">
+      {socialLinks.map((social) => (
+        <a
+          key={social.label}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`text-${isSecondary ? 'secondary' : 'white'} hover:text-white text-[24px]`}
+        >
+          <social.icon />
+        </a>
+      ))}
+    </div>
+  );
+
   const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? 'flex sm:hidden' : 'hidden sm:flex'} flex-row gap-6`}>
+    <ul className={`list-none ${isSecondary ? 'flex sm:hidden' : 'hidden sm:flex'} flex-row gap-6 items-center`}>
       {navLinks.map((link) => (
         <li
           key={link.id}
@@ -47,6 +82,9 @@ const Navbar = () => {
         } hover:text-white text-[20px] font-medium cursor-pointer`}
       >
         <button onClick={toggleResume}>Resume</button>
+      </li>
+      <li>
+        {renderSocialLinks(isSecondary)}
       </li>
     </ul>
   );
