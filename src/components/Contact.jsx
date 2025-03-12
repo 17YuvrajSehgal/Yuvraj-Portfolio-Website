@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -7,6 +7,9 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import "../index.css";
+
+// Initialize EmailJS with environment variable
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
 const InputField = ({ label, value, onChange, placeholder, name, type }) => (
   <label className="flex flex-col">
@@ -47,12 +50,13 @@ const Contact = () => {
     return regex.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setEmailError("");
     setNameError("");
     setConfirmation("");
 
+    // Validate inputs
     if (!validateEmail(form.email)) {
       setEmailError("Please enter a valid email address.");
       return;
@@ -65,36 +69,38 @@ const Contact = () => {
 
     setLoading(true);
 
-    emailjs
-      .send(
-        "service_r2i0by4",
-        "template_mf5x3bh",
+    try {
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Yuvraj Sehgal",
           from_email: form.email,
           to_email: "17yuvraj.sehgal@gmail.com",
           message: form.message,
-        },
-        "p-gXzzyvEhPaJ0XA-"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          setConfirmation("Thank you! I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
         }
-      )
-      .catch((error) => {
-        setLoading(false);
-        console.error(error);
-        setConfirmation("Something went wrong. Please try again. :/");
+      );
+
+      console.log("Email sent successfully:", result);
+      setLoading(false);
+      setConfirmation("Thank you! I will get back to you as soon as possible.");
+
+      setForm({
+        name: "",
+        email: "",
+        message: "",
       });
+    } catch (error) {
+      setLoading(false);
+      console.error("Email sending failed:", error);
+      
+      if (error.status === 412) {
+        setConfirmation("There's an issue with the email service configuration. Please try again later or contact me directly at 17yuvraj.sehgal@gmail.com");
+      } else {
+        setConfirmation("Something went wrong. Please try again or contact me directly at 17yuvraj.sehgal@gmail.com");
+      }
+    }
   };
 
   return (
@@ -124,14 +130,17 @@ const Contact = () => {
           />
           {emailError && <span className="text-red-500">{emailError}</span>}
 
-          <InputField
-            label="Your Message"
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            placeholder="What you want to say...?"
-            type="text"
-          />
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Message</span>
+            <textarea
+              rows={7}
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="What you want to say...?"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+            />
+          </label>
 
           <button
             type="submit"
@@ -139,7 +148,11 @@ const Contact = () => {
           >
             {loading ? "Sending..." : "Send"}
           </button>
-          {confirmation && <p className="text-green-500">{confirmation}</p>}
+          {confirmation && (
+            <p className={confirmation.includes("wrong") ? "text-red-500" : "text-green-500"}>
+              {confirmation}
+            </p>
+          )}
         </form>
       </motion.div>
 
