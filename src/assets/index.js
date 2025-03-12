@@ -6,7 +6,7 @@ import mengalo from "./company/mengalo.png";
 // Import tech stack images
 import python from "./tech-stack/python.png";
 import langchain from "./tech-stack/langchain.png";
-import spring from "./tech-stack/spring.png";
+import spring from "./tech/spring.png";
 import c from "./tech-stack/c.png";
 import cpp from "./tech-stack/cpp.png";
 import java from "./tech-stack/java.png";
@@ -28,39 +28,55 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
+import selenium from "./tech/selenium.png";
+import cucumber from "./tech/cucumber.png";
+import sql from "./tech/sql.png";
+import noe4j from "./tech/neo4j.png";
+import docker from "./tech/docker.png";
+import confluence from "./tech/confluence.png";
+import jira from "./tech/jira.png";
+import bitbucket from "./tech/bitbucket.png";
 
 // Import common assets
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
 export {
-  brocku,
-  scotiabank,
-  python,
-  c,
-  cpp,
-  langchain,
-  spring,
-  java,
-  github,
-  css,
-  git,
-  html,
-  javascript,
-  nodejs,
-  reactjs,
-  tailwind,
-  threejs,
-  weatherpedia,
-  termpw,
-  payloadmaster,
-  mhft,
-  sketcher,
-  CompileVortex,
-  logo,
-  menu,
-  close,
-  mengalo,
+    brocku,
+    scotiabank,
+    python,
+    c,
+    cpp,
+    langchain,
+    java,
+    github,
+    css,
+    git,
+    html,
+    javascript,
+    nodejs,
+    reactjs,
+    tailwind,
+    threejs,
+    weatherpedia,
+    termpw,
+    payloadmaster,
+    mhft,
+    sketcher,
+    CompileVortex,
+    logo,
+    menu,
+    close,
+    mengalo,
+    selenium,
+    cucumber,
+    sql,
+    noe4j,
+    spring,
+    docker,
+    confluence,
+    jira,
+    bitbucket
 };
