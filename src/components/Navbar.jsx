@@ -14,7 +14,7 @@ const Navbar = () => {
     const baseUrl = import.meta.env.MODE === 'production' 
       ? '/Yuvraj-Portfolio-Website'
       : '';
-    const resumeUrl = `${baseUrl}/Resume.pdf`;
+    const resumeUrl = `${baseUrl}/Yuvraj_Sehgal_Resume.pdf`;
     window.open(resumeUrl);
   };
 
