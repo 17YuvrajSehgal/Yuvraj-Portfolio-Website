@@ -9,7 +9,11 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const toggleResume = () => {
-    const resumeUrl = '/Resume.pdf';
+    // Use the correct base URL for GitHub Pages
+    const baseUrl = import.meta.env.MODE === 'production' 
+      ? '/Yuvraj-Portfolio-Website'
+      : '';
+    const resumeUrl = `${baseUrl}/Resume.pdf`;
     window.open(resumeUrl);
   };
 
