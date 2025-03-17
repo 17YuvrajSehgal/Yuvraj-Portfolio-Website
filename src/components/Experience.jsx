@@ -85,11 +85,17 @@ const ExperienceCard = ({ experience }) => (
 
 const Experience = () => (
   <>
-    <motion.div variants={textVariant()} className="flex flex-col items-end mr-4">
-      <p className={`${styles.sectionSubText}`}>
+    <motion.div 
+      variants={textVariant()} 
+      className="w-full flex flex-col items-end px-4 sm:px-8 relative z-20 bg-primary bg-opacity-90"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
+      <p className={`${styles.sectionSubText} text-right`}>
         What I have done so far
       </p>
-      <h2 className={`${styles.sectionHeadText}`}>Work Experience</h2>
+      <h2 className={`${styles.sectionHeadText} text-right`}>Work Experience</h2>
     </motion.div>
 
     <div className="mt-20 flex flex-col">
@@ -100,11 +106,17 @@ const Experience = () => (
       </VerticalTimeline>
     </div>
 
-    <motion.div variants={textVariant()} className="flex flex-col items-start ml-4 mt-32">
-      <p className={`${styles.sectionSubText}`}>
+    <motion.div 
+      variants={textVariant()} 
+      className="w-full flex flex-col items-start px-4 sm:px-8 mt-32 relative z-20 bg-primary bg-opacity-90"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+    >
+      <p className={`${styles.sectionSubText} text-left`}>
         What am I proficient at
       </p>
-      <h2 className={`${styles.sectionHeadText}`}>Techstack</h2>
+      <h2 className={`${styles.sectionHeadText} text-left`}>Techstack</h2>
     </motion.div>
 
     <div className="mt-20 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-8 sm:gap-10 px-2 sm:px-8 place-items-center">
