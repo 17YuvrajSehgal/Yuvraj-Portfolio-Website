@@ -43,7 +43,7 @@ const Navbar = () => {
   }, [toggle]);
 
   const renderSocialLinks = (isSecondary) => (
-    <div className="flex gap-4">
+    <div className={`flex ${isSecondary ? 'justify-center' : ''} gap-4`}>
       {socialLinks.map((social) => (
         <a
           key={social.label}
@@ -59,7 +59,7 @@ const Navbar = () => {
   );
 
   const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? 'flex sm:hidden' : 'hidden sm:flex'} flex-row gap-6 items-center`}>
+    <ul className={`list-none ${isSecondary ? 'flex flex-col sm:hidden' : 'hidden sm:flex'} ${isSecondary ? 'gap-4' : 'flex-row gap-6'} items-center`}>
       {navLinks.map((link) => (
         <li
           key={link.id}
@@ -83,7 +83,7 @@ const Navbar = () => {
       >
         <button onClick={toggleResume}>Resume</button>
       </li>
-      <li>
+      <li className="w-full">
         {renderSocialLinks(isSecondary)}
       </li>
     </ul>
@@ -118,7 +118,7 @@ const Navbar = () => {
               onClick={() => setToggle(!toggle)}
             />
             <div
-              className={`p-4 black-gradient absolute top-14 right-0 mx-2 my-2 min-w-[120px] z-10 rounded-xl foggy-glass ${
+              className={`p-6 black-gradient absolute top-14 right-0 mx-2 my-2 min-w-[140px] z-10 rounded-xl foggy-glass ${
                 toggle ? 'flex' : 'hidden'
               }`}
             >
