@@ -14,15 +14,34 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { Tilt } from "react-tilt";
 
 const TechIcon = ({ index, name, icon }) => (
-  <div className="w-28 h-28">
-    <motion.div
-      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className="w-full h-full rounded-full flex justify-center items-center bg-tertiary cursor-pointer hover:shadow-card transition-all duration-300"
-    >
-      <img src={icon} alt={name} className="w-16 h-16 object-contain" />
-    </motion.div>
-    <p className="text-center text-secondary mt-2 text-[14px]">{name}</p>
-  </div>
+  <motion.div
+    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: false, amount: 0.25 }}
+    variants={{
+      hidden: { opacity: 0, scale: 0.8 },
+      show: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+          type: "spring",
+          duration: 0.5,
+          delay: index * 0.2
+        }
+      }
+    }}
+  >
+    <div className="w-full h-full rounded-full flex justify-center items-center bg-tertiary cursor-pointer hover:shadow-card transition-all duration-300">
+      <img 
+        src={icon} 
+        alt={name} 
+        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-contain"
+        loading="lazy"
+      />
+    </div>
+    <p className="text-center text-secondary mt-2 text-[10px] sm:text-[12px] md:text-[14px]">{name}</p>
+  </motion.div>
 );
 
 const ExperienceCard = ({ experience }) => (
@@ -88,7 +107,7 @@ const Experience = () => (
       <h2 className={`${styles.sectionHeadText}`}>Techstack</h2>
     </motion.div>
 
-    <div className="mt-20 flex flex-wrap justify-center gap-10">
+    <div className="mt-20 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-8 sm:gap-10 px-2 sm:px-8 place-items-center">
       {technologies.map((technology, index) => (
         <TechIcon key={technology.name} index={index} {...technology} />
       ))}
