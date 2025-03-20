@@ -3,7 +3,6 @@ import {motion} from "framer-motion";
 import {styles} from "../styles";
 import {ComputersCanvas} from "./canvas";
 import Typewriter from "typewriter-effect";
-import GitHubContributions from "./GitHubContributions";
 
 const Hero = () => {
     return (
@@ -98,10 +97,6 @@ const Hero = () => {
                         </div>
                     </a>
                 </div>
-            </section>
-            
-            <section className="relative w-full">
-                <GitHubContributions />
             </section>
         </>
     );

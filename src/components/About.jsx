@@ -3,6 +3,7 @@ import React from 'react';
 import {SectionWrapper} from '../hoc';
 import {styles} from '../styles';
 import {fadeIn, textVariant} from '../utils/motion';
+import GitHubContributions from "./GitHubContributions.jsx";
 
 const About = () => {
     return (
@@ -25,6 +26,10 @@ const About = () => {
                 I bring a proven track record in AI/ML development, automation engineering, and innovative research
                 in computer science.
             </motion.p>
+
+            <section className="relative w-full">
+                <GitHubContributions />
+            </section>
         </>
     );
 };

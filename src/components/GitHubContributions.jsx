@@ -21,8 +21,8 @@ const GitHubContributions = () => {
             username="17YuvrajSehgal"
             theme={theme}
             blockSize={12}
-            blockMargin={4}
-            fontSize={12}
+            blockMargin={5}
+            fontSize={15}
             style={{
               color: 'white',
               padding: '1rem',
