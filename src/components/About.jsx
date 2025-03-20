@@ -27,7 +27,7 @@ const About = () => {
                 in computer science.
             </motion.p>
 
-            <section className="relative w-full">
+            <section className="relative w-full -mb-20">
                 <GitHubContributions />
             </section>
         </>

@@ -13,7 +13,7 @@ const GitHubContributions = () => {
   };
 
   return (
-    <div className="w-full min-h-[300px] flex flex-col justify-center items-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="w-full min-h-[300px] flex flex-col justify-center items-center py-6 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-7xl bg-tertiary/30 backdrop-blur-md rounded-xl p-8 shadow-xl">
         <h2 className="text-white text-2xl font-bold mb-8 text-center">GitHub Contributions</h2>
         <div className="overflow-x-auto flex justify-center">
