@@ -17,14 +17,7 @@ const About = () => {
                 variants={fadeIn('', '', 0.1, 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
-                As a Computer Science student specializing in Intelligent Systems at Brock University with an 87% GPA,
-                I combine academic excellence with practical expertise in AI development and software engineering.
-                Currently working as an AI Developer at Mengalo and previously at Scotiabank, I've delivered impactful
-                solutions that reduced testing time by 75% and improved efficiency by 90% through AI-powered tools.
-                My technical stack includes Java, Python, JavaScript, and various modern frameworks, complemented by
-                extensive experience in both SQL and NoSQL databases. As a Match of Minds Scholarship recipient,
-                I bring a proven track record in AI/ML development, automation engineering, and innovative research
-                in computer science.
+                I am an AI and Full-Stack Engineer passionate about building intelligent, scalable, and high-performance systems. With expertise in AI-driven automation, backend development, and cloud infrastructure, I have developed AI-powered inboxes, smart CRMs, and data-driven applications using React, Node.js, Java, Spring Boot, and FastAPI. My work blends cutting-edge AI models with full-stack engineering, driving innovation in automation and data intelligence. Let’s connect to build the future of AI-powered solutions! 🚀
             </motion.p>
 
             <section className="relative w-full -mb-20">
