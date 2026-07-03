@@ -59,13 +59,13 @@ const Navbar = () => {
   );
 
   const renderNavLinks = (isSecondary) => (
-    <ul className={`list-none ${isSecondary ? 'flex flex-col sm:hidden' : 'hidden sm:flex'} ${isSecondary ? 'gap-4' : 'flex-row gap-6'} items-center`}>
+    <ul className={`list-none ${isSecondary ? 'flex flex-col lg:hidden' : 'hidden lg:flex'} ${isSecondary ? 'gap-4' : 'flex-row gap-5'} items-center`}>
       {navLinks.map((link) => (
         <li
           key={link.id}
           className={`${
             active === link.title ? 'text-white' : isSecondary ? 'text-secondary' : 'text-white'
-          } hover:text-white text-[20px] font-medium cursor-pointer`}
+          } hover:text-white text-[18px] font-medium cursor-pointer`}
           onClick={() => {
             setActive(link.title);
             if (isSecondary) {
@@ -79,7 +79,7 @@ const Navbar = () => {
       <li
         className={`text-${
           isSecondary ? 'secondary' : 'white'
-        } hover:text-white text-[20px] font-medium cursor-pointer`}
+        } hover:text-white text-[18px] font-medium cursor-pointer`}
       >
         <button onClick={toggleResume}>Resume</button>
       </li>
@@ -110,7 +110,7 @@ const Navbar = () => {
             </p>
           </Link>
           {renderNavLinks(false)}
-          <div className="sm:hidden flex flex-1 justify-end items-center">
+          <div className="lg:hidden flex flex-1 justify-end items-center">
             <img
               src={toggle ? close : menu}
               alt="menu"

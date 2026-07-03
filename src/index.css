@@ -41,9 +41,28 @@
 .green-text-gradient,
 .blue-text-gradient,
 .pink-text-gradient {
-  background: linear-gradient(to top, #f12711, #f5af19);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.orange-text-gradient {
+  background: linear-gradient(to top, #f12711, #f5af19);
+  -webkit-background-clip: text;
+}
+
+.blue-text-gradient {
+  background: linear-gradient(to top, #2f80ed, #56ccf2);
+  -webkit-background-clip: text;
+}
+
+.green-text-gradient {
+  background: linear-gradient(to top, #11998e, #38ef7d);
+  -webkit-background-clip: text;
+}
+
+.pink-text-gradient {
+  background: linear-gradient(to top, #ec008c, #fc6767);
+  -webkit-background-clip: text;
 }
 
 .translucent-background {

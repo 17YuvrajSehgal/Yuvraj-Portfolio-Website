@@ -1,6 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -8,8 +7,7 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import "../index.css";
 
-// Initialize EmailJS with environment variable
-emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+const CONTACT_EMAIL = "17yuvraj.sehgal@gmail.com";
 
 const InputField = ({ label, value, onChange, placeholder, name, type }) => (
   <label className="flex flex-col">
@@ -26,13 +24,11 @@ const InputField = ({ label, value, onChange, placeholder, name, type }) => (
 );
 
 const Contact = () => {
-  const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const [loading, setLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
   const [nameError, setNameError] = useState("");
   const [confirmation, setConfirmation] = useState("");
@@ -46,61 +42,35 @@ const Contact = () => {
   };
 
   const validateEmail = (email) => {
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     return regex.test(email);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setEmailError("");
     setNameError("");
     setConfirmation("");
-
-    // Validate inputs
-    if (!validateEmail(form.email)) {
-      setEmailError("Please enter a valid email address.");
-      return;
-    }
 
     if (!form.name.trim()) {
       setNameError("Name is required.");
       return;
     }
 
-    setLoading(true);
-
-    try {
-      const result = await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Yuvraj Sehgal",
-          from_email: form.email,
-          to_email: "17yuvraj.sehgal@gmail.com",
-          message: form.message,
-        }
-      );
-
-      console.log("Email sent successfully:", result);
-      setLoading(false);
-      setConfirmation("Thank you! I will get back to you as soon as possible.");
-
-      setForm({
-        name: "",
-        email: "",
-        message: "",
-      });
-    } catch (error) {
-      setLoading(false);
-      console.error("Email sending failed:", error);
-      
-      if (error.status === 412) {
-        setConfirmation("There's an issue with the email service configuration. Please try again later or contact me directly at 17yuvraj.sehgal@gmail.com");
-      } else {
-        setConfirmation("Something went wrong. Please try again or contact me directly at 17yuvraj.sehgal@gmail.com");
-      }
+    if (!validateEmail(form.email)) {
+      setEmailError("Please enter a valid email address.");
+      return;
     }
+
+    const subject = encodeURIComponent(`Portfolio message from ${form.name}`);
+    const body = encodeURIComponent(
+      `${form.message}\n\n— ${form.name}\n${form.email}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
+    setConfirmation(
+      "Your email app should open with this message pre-filled — just press send."
+    );
   };
 
   return (
@@ -109,13 +79,13 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact Me</h3>
 
-        <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
+        <form onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
           <InputField
             label="Your Name"
             name="name"
             value={form.name}
             onChange={handleChange}
-            placeholder="Insert Your name here..."
+            placeholder="Your name"
             type="text"
           />
           {nameError && <span className="text-red-500">{nameError}</span>}
@@ -125,7 +95,7 @@ const Contact = () => {
             name="email"
             value={form.email}
             onChange={handleChange}
-            placeholder="What's your email address?"
+            placeholder="you@example.com"
             type="email"
           />
           {emailError && <span className="text-red-500">{emailError}</span>}
@@ -137,7 +107,7 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What you want to say...?"
+              placeholder="What would you like to talk about?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -146,13 +116,19 @@ const Contact = () => {
             type="submit"
             className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
-            {loading ? "Sending..." : "Send"}
+            Send
           </button>
-          {confirmation && (
-            <p className={confirmation.includes("wrong") ? "text-red-500" : "text-green-500"}>
-              {confirmation}
-            </p>
-          )}
+          {confirmation && <p className="text-green-500">{confirmation}</p>}
+
+          <p className="text-secondary text-[14px]">
+            Prefer email? Reach me directly at{" "}
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="text-[#915eff] hover:text-white transition-colors font-medium"
+            >
+              {CONTACT_EMAIL}
+            </a>
+          </p>
         </form>
       </motion.div>
 

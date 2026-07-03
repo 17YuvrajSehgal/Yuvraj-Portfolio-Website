@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter } from 'react-router-dom';
-import { About, Contact, Experience, Hero, Navbar, StarsCanvas, Tech, Works } from './components';
+import { About, Contact, Education, Experience, Hero, Navbar, Research, StarsCanvas, Works } from './components';
 
 const App = () => {
   return (
@@ -12,8 +12,9 @@ const App = () => {
         </div>
         <About />
         <Experience />
-        {/*<Tech />*/}
+        <Research />
         <Works />
+        <Education />
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />

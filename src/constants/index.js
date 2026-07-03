@@ -1,27 +1,40 @@
 import {
+    SiApacheairflow,
+    SiApachespark,
+    SiFastapi,
+    SiGooglecloud,
+    SiKubernetes,
+    SiMongodb,
+    SiPostgresql,
+    SiPytorch,
+    SiScikitlearn,
+    SiTensorflow,
+} from "react-icons/si";
+
+import {
+    annStockCover,
+    artifactToolCover,
     brocku,
-    CompileVortex,
-    confluence,
-    css,
-    cucumber,
     docker,
-    git,
-    html,
+    incidentAgentCover,
     java,
     javascript,
     langchain,
+    lmatCover,
     mengalo,
-    mhft,
+    newsHubCover,
     nodejs,
     noe4j,
     python,
     reactjs,
+    rlTradingCover,
     scotiabank,
     selenium,
     spring,
     sql,
-    termpw,
-    weatherpedia
+    traceDatasetCover,
+    traceSynthCover,
+    webSummaryCover,
 } from "../assets";
 
 export const navLinks = [
@@ -31,7 +44,15 @@ export const navLinks = [
     },
     {
         id: "work",
-        title: "Work",
+        title: "Experience",
+    },
+    {
+        id: "research",
+        title: "Research",
+    },
+    {
+        id: "projects",
+        title: "Projects",
     },
     {
         id: "contact",
@@ -39,45 +60,55 @@ export const navLinks = [
     },
 ];
 
-export const frameworks = [
-    {title: "Spring", icon: spring},
-    {title: "Langchain", icon: langchain},
-];
-
 export const technologies = [
-    {name: "Java", icon: java},
     {name: "Python", icon: python},
+    {name: "PyTorch", Icon: SiPytorch, color: "#EE4C2C"},
+    {name: "TensorFlow", Icon: SiTensorflow, color: "#FF6F00"},
+    {name: "scikit-learn", Icon: SiScikitlearn, color: "#F7931E"},
+    {name: "LangChain", icon: langchain},
+    {name: "FastAPI", Icon: SiFastapi, color: "#009688"},
+    {name: "Neo4j", icon: noe4j},
+    {name: "React", icon: reactjs},
+    {name: "Node.js", icon: nodejs},
+    {name: "Java", icon: java},
+    {name: "Spring Boot", icon: spring},
     {name: "JavaScript", icon: javascript},
-    {name: "HTML 5", icon: html},
-    {name: "CSS 3", icon: css},
-    {name: "React JS", icon: reactjs},
-    {name: "Selenium", icon: selenium},
-    {name: "Node JS", icon: nodejs},
-    {name: "Cucumber", icon: cucumber},
-    {name: "Git", icon: git},
     {name: "SQL", icon: sql},
-    {name: "Neo4J", icon: noe4j},
-    {name: "Spring", icon: spring},
+    {name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1"},
+    {name: "MongoDB", Icon: SiMongodb, color: "#47A248"},
     {name: "Docker", icon: docker},
-    // {name: "Confluence", icon: confluence},
-    // {name: "JIRA", icon: jira},
-    // { name: "Bitbucket", icon: bitbucket },
-
+    {name: "Kubernetes", Icon: SiKubernetes, color: "#326CE5"},
+    {name: "Google Cloud", Icon: SiGooglecloud, color: "#4285F4"},
+    {name: "Apache Airflow", Icon: SiApacheairflow, color: "#017CEE"},
+    {name: "Apache Spark", Icon: SiApachespark, color: "#E25A1C"},
+    {name: "Selenium", icon: selenium},
 ];
 
 export const experiences = [
+    {
+        title: "Artificial Intelligence Researcher",
+        company_name: "Brock University · Mitacs Accelerate fellowship with Ciena",
+        icon: brocku,
+        iconBg: "#161329",
+        date: "Feb 2026 - Present",
+        points: [
+            "TraceSynth: developed constraint-guided diffusion models that generate production-quality Linux kernel traces — accepted at FSE 2026 (Industry Track).",
+            "LMAT: contributed to an adaptive tracing approach for efficient system-behavior analysis using language models — published in the Journal of Systems and Software (JSS, 2026).",
+            "Built an agentic incident-triage system (LangGraph + hypothesis-driven ReAct loop) correlating logs, telemetry, and historical Jira data for automated root-cause diagnosis.",
+            "Curated large-scale microservice trace/log datasets from benchmark systems (DeathStarBench, TrainTicket) on GCP for AIOps research.",
+        ],
+    },
     {
         title: "AI Developer",
         company_name: "Mengalo",
         icon: mengalo,
         iconBg: "#161329",
-        date: "Aug 2024 - Present",
+        date: "Aug 2024 - Dec 2025",
         points: [
-            "Built a full-stack AI inbox for automated message generation powered with agentic AI using Python's Fast API and React.",
-            "Utilized artificial intelligence for real-time data analytics using LLM RAG Chatbot with Python, LangChain, and Neo4j.",
-            "Designed a database schema and an automated pipeline for cleaning and transforming data from a PostgreSQL relational database to a Neo4j graph database.",
-            "Implemented code reviews, secure coding practices, git management, and agile methodologies, promoting productivity and code quality in startup environment.",
-            "Collaborated with software development teams, product managers, and client stakeholders to identify improvements and new features for existing products.",
+            "Built and deployed production AI services and REST APIs (Python, FastAPI) on Docker and GCP for business and customer-engagement automation.",
+            "Designed an LLM- and RAG-powered analytics chatbot (LangChain, Neo4j) for real-time, natural-language querying over operational data.",
+            "Built a full-stack AI inbox for automated, agentic message generation with a FastAPI backend and React frontend.",
+            "Designed an automated pipeline for cleaning and transforming data from PostgreSQL into a Neo4j knowledge graph, powering NLP and prompt-engineering workflows.",
         ],
     },
     {
@@ -85,111 +116,214 @@ export const experiences = [
         company_name: "Brock University",
         icon: brocku,
         iconBg: "#161329",
-        date: "Jan 2024 - Dec 2024",
+        date: "Jan 2024 - Jan 2025",
         points: [
-            "Received prestigious Match of Minds Scholarship for exceptional academic performance and research potential, as sole recipient in the department.",
-            "Created an open-source dataset of over 2,000 research artifacts, promoting collaboration and accessibility; projected to improve research efficiency by 30%, accelerating discovery and innovation.",
-            "Conducted empirical research with Professor to evaluate capability of generative AI in evaluating software artifacts for 40 conferences.",
-            "Designed an Artifact Documentation tool with advanced OOPs in Python and OpenAI and Neo4j, analyzing conference acceptance probabilities with AI, decreasing documentation time by 90%.",
+            "Built an artifact-documentation tool (Python OOP, OpenAI API, Neo4j) that analyzes conference acceptance probabilities and cut documentation time by ~90%.",
+            "Created an open-source dataset of 2,000+ research artifacts across 40 conferences, projected to improve research efficiency by ~30%.",
+            "Sole departmental recipient of the Match of Minds research scholarship.",
+            "Conducted empirical research on the capability of generative AI to evaluate software artifacts.",
         ],
     },
     {
-        title: "Automation Engineer Coop",
+        title: "QA Automation Engineer",
         company_name: "Scotiabank",
         icon: scotiabank,
         iconBg: "#161329",
         date: "May 2024 - Aug 2024",
         points: [
-            "Learned Android automation and built automation for 20 test case scenarios using Java, Selenium, and Appium, reducing testing time by over 75% within four months.",
-            "Developed a Java package with advanced OOPs concepts to manage boilerplate code for Android automation, maximizing reusability and saving time for future testing efforts.",
-            "Collaborated with the business quality assurance team to design test case scenarios aligning with business requirements.",
-            "Integrated a reporting module leveraging HTML/CSS to generate comprehensive test reports for each test case, to cut down the validation time by 50%.",
+            "Built Android test automation for 15+ scenarios (Java, Selenium, Appium), cutting testing time by over 75% for financial applications.",
+            "Developed reusable UI/API automation libraries (Selenium, RestAssured) and an HTML/CSS reporting module, cutting validation time by ~50%.",
+            "Collaborated with the business QA team to design test scenarios aligned with business requirements.",
         ],
     },
     {
-        title: "Full Stack Developer Coop",
+        title: "Full Stack Developer",
         company_name: "Scotiabank",
         icon: scotiabank,
         iconBg: "#161329",
         date: "May 2023 - Aug 2023",
         points: [
-            "Delivered a comprehensive test suite in Java JUnit and Karma for the LMS website, increasing test coverage by 15% and ensuring compliance with the bank's 85% minimum coverage mandate.",
-            "Collaborated with another department to improvise an automation script written in Python; extended its functionality reducing manual file management time by 20%.",
+            "Engineered Python ETL/data pipelines to ingest, transform, validate, and reconcile operational data feeds, cutting manual file handling by 20%.",
+            "Built the bank's LMS platform with a responsive ReactJS frontend and Node.js/REST backend microservices, deployed to GCP Cloud Run with Firestore persistence.",
+            "Delivered a JUnit/Jest/React Testing Library test suite, raising coverage 15% to meet the bank's 85% mandate.",
         ],
     },
     {
-        title: "Automation Engineer Coop",
+        title: "QA Automation Engineer",
         company_name: "Scotiabank",
         icon: scotiabank,
         iconBg: "#161329",
         date: "Sep 2022 - Dec 2022",
         points: [
-            "Automated web testing regression test suites utilizing Selenium and Cucumber BDD in Java, integrating with the bank's automation framework and reduced testing time by 70%.",
+            "Automated 35+ regression scenarios for front-office financial systems (Selenium, Cucumber BDD, Java), reducing manual testing effort by ~70%.",
+            "Integrated test suites into CI/CD with Jenkins, Git, and Bitbucket for automated deployments and code review.",
         ],
     },
 ];
 
+export const publications = [
+    {
+        title: "TraceSynth: Generating Production-Quality Kernel Traces with Constraint-Guided Diffusion Models",
+        authors: "Y. Sehgal, S. Patel, M. Panahandeh, N. Ezzati-Jivan, F. Tetreault",
+        venue: "FSE 2026 · Industry Track",
+        publisher: "ACM",
+        badge: "FSE 2026",
+        description:
+            "A diffusion-based framework that generates synthetic kernel traces to augment limited real data for downstream ML tasks — modeling traces as multi-channel sequences with a Transformer-based denoising diffusion process and constraint-guided repair to enforce system invariants.",
+        link: "",
+    },
+    {
+        title: "LMAT: An Adaptive Tracing Approach Based on Efficient System Behavior Analysis Using Language Models",
+        authors: "K. Darvishi, M. Noferesti, Y. Sehgal, N. Ezzati-Jivan",
+        venue: "Journal of Systems and Software (JSS)",
+        publisher: "Elsevier",
+        badge: "JSS 2026",
+        description:
+            "An adaptive tracing approach that uses language models to analyze system behavior efficiently — recording detailed traces only when behavior shifts, minimizing overhead.",
+        link: "https://www.sciencedirect.com/science/article/pii/S0164121226001238",
+    },
+];
+
+export const education = [
+    {
+        degree: "M.Sc. Computer Science",
+        school: "Brock University",
+        date: "Sep 2025 - Sep 2027 (expected)",
+        icon: brocku,
+        points: [
+            "Thesis-based; research in AI for systems and trustworthy, responsible AI.",
+            "Mitacs Accelerate industrial fellowship with Ciena Corp.",
+            "Teaching Assistant — COSC 3P97 Mobile Computing & COSC 3P95 Software Analysis & Testing.",
+        ],
+    },
+    {
+        degree: "B.Sc. (Honours) Computer Science, Intelligent Systems",
+        school: "Brock University",
+        date: "Jan 2021 - Jan 2025",
+        icon: brocku,
+        points: [
+            "GPA 87/100 · Dean's Honour List (all years).",
+            "Golden Key International Honour Society (top 15%).",
+        ],
+    },
+];
+
+export const awards = [
+    "Mitacs Accelerate Fellowship — Ciena ($10K)",
+    "Graduate Research Funding ($29,348)",
+    "Match of Minds Scholarship — sole departmental recipient",
+    "Golden Key International Honour Society (top 15%)",
+    "Brock Entrance Scholarship ($6K)",
+];
+
 export const projects = [
     {
-        name: "Stock Market Prediction - Neural Network",
+        name: "TraceSynth — Kernel Trace Generation",
         description:
-            "Advanced stock price prediction system utilizing Artificial Neural Network technology with TensorFlow, demonstrating practical application of deep learning in financial forecasting.",
+            "Constraint-guided diffusion models that generate production-quality Linux kernel traces for systems and AIOps research. Accepted at FSE 2026 (Industry Track).",
+        tags: [
+            {name: "Diffusion Models", color: "blue-text-gradient"},
+            {name: "PyTorch", color: "green-text-gradient"},
+            {name: "Linux Tracing", color: "pink-text-gradient"},
+        ],
+        image: traceSynthCover,
+        source_code_link: "https://github.com/17YuvrajSehgal/SyntheticLogGeneration",
+    },
+    {
+        name: "LMAT — Adaptive Tracing with LLMs",
+        description:
+            "Adaptive tracing approach that uses language models for efficient system-behavior analysis, recording detailed traces only during significant behavioral shifts. Published in JSS (2026).",
+        tags: [
+            {name: "LLMs", color: "blue-text-gradient"},
+            {name: "Systems", color: "green-text-gradient"},
+            {name: "JSS 2026", color: "pink-text-gradient"},
+        ],
+        image: lmatCover,
+        source_code_link: "https://github.com/17YuvrajSehgal/adaptive_tracer",
+        paper_link: "https://www.sciencedirect.com/science/article/pii/S0164121226001238",
+    },
+    {
+        name: "Agentic Incident Triage",
+        description:
+            "LangGraph agent with a hypothesis-driven ReAct loop that correlates logs, telemetry, and historical Jira data to automate root-cause diagnosis of microservice incidents.",
+        tags: [
+            {name: "LangGraph", color: "blue-text-gradient"},
+            {name: "LLM Agents", color: "green-text-gradient"},
+            {name: "AIOps", color: "pink-text-gradient"},
+        ],
+        image: incidentAgentCover,
+        source_code_link: "https://github.com/17YuvrajSehgal/JiraAndLogs",
+    },
+    {
+        name: "Microservice Trace Dataset",
+        description:
+            "Large-scale trace and log datasets curated from benchmark microservice systems (DeathStarBench, TrainTicket) on Google Cloud, built to support AIOps research.",
+        tags: [
+            {name: "AIOps", color: "blue-text-gradient"},
+            {name: "GCP", color: "green-text-gradient"},
+            {name: "Data Engineering", color: "pink-text-gradient"},
+        ],
+        image: traceDatasetCover,
+        source_code_link: "https://github.com/17YuvrajSehgal/microservice-trace-dataset",
+    },
+    {
+        name: "AURA — Artifact Evaluation Framework",
+        description:
+            "Automated framework for evaluating research software artifacts against conference guidelines (Python, OpenAI API, Neo4j) — cut documentation time by ~90%, backed by a dataset of 2,000+ artifacts across 40 conferences.",
+        tags: [
+            {name: "OpenAI API", color: "blue-text-gradient"},
+            {name: "Neo4j", color: "green-text-gradient"},
+            {name: "Research Tooling", color: "pink-text-gradient"},
+        ],
+        image: artifactToolCover,
+        source_code_link: "https://github.com/17YuvrajSehgal/AURA",
+    },
+    {
+        name: "RL Trading Agent — PPO",
+        description:
+            "Reinforcement-learning stock trading agent trained with Proximal Policy Optimization, learning allocation policies from historical market data.",
+        tags: [
+            {name: "Reinforcement Learning", color: "blue-text-gradient"},
+            {name: "PPO", color: "green-text-gradient"},
+            {name: "Python", color: "pink-text-gradient"},
+        ],
+        image: rlTradingCover,
+        source_code_link: "https://github.com/17YuvrajSehgal/RL-StockPrediction-PPO",
+    },
+    {
+        name: "Stock Prediction — ANN",
+        description:
+            "Stock price prediction system built on an artificial neural network with TensorFlow, demonstrating practical deep learning for financial forecasting.",
         tags: [
             {name: "TensorFlow", color: "blue-text-gradient"},
             {name: "Neural Networks", color: "green-text-gradient"},
             {name: "Python", color: "pink-text-gradient"},
         ],
-        image: mhft,
+        image: annStockCover,
         source_code_link: "https://github.com/17YuvrajSehgal/stock_prediction_using_ANN",
     },
     {
-        name: "News App - Android",
+        name: "AI Web Summary Tool",
         description:
-            "Feature-rich Android news application utilizing News-API, enabling categorical news browsing, multilingual search, bookmarking with built-in database support, and user preferences storage via shared preferences.",
-        tags: [
-            {name: "Android", color: "blue-text-gradient"},
-            {name: "News-API", color: "green-text-gradient"},
-            {name: "Java", color: "pink-text-gradient"},
-            {name: "SQLite", color: "pink-text-gradient"},
-        ],
-        image: CompileVortex,
-        source_code_link: "https://github.com/17YuvrajSehgal/NewsHub",
-    },
-    {
-        name: "AI Powered Web Summary Tool",
-        description:
-            "Created an AI tool utilizing Java Spring Boot and OpenAI to summarize web pages, serving as Scrum Master for a team of five and a back-end developer.",
+            "AI tool built with Java Spring Boot and the OpenAI API to summarize web pages — served as Scrum Master and backend developer for a team of five.",
         tags: [
             {name: "Spring Boot", color: "blue-text-gradient"},
             {name: "OpenAI", color: "green-text-gradient"},
             {name: "Java", color: "pink-text-gradient"},
         ],
-        image: weatherpedia,
+        image: webSummaryCover,
         source_code_link: "https://github.com/17YuvrajSehgal/COSC-4P02-PROJECT",
     },
     {
-        name: "Stock Market Prediction - Genetic Programming",
+        name: "NewsHub — Android App",
         description:
-            "Designed a genetic programming model in Java operating on a regression algorithm and achieved over 80% accuracy in predicting NASDAQ and S&P 500 stock prices.",
+            "Feature-rich Android news app using News-API with categorical browsing, multilingual search, bookmarking backed by SQLite, and preference storage.",
         tags: [
-            {name: "Java", color: "blue-text-gradient"},
-            {name: "Genetic Programming", color: "green-text-gradient"},
-            {name: "Regression", color: "pink-text-gradient"},
+            {name: "Android", color: "blue-text-gradient"},
+            {name: "Java", color: "green-text-gradient"},
+            {name: "SQLite", color: "pink-text-gradient"},
         ],
-        image: mhft,
-        source_code_link: "https://github.com/17YuvrajSehgal/Stock-Price-Prediction-Using-GP",
-    },
-    {
-        name: "Village War Game",
-        description:
-            "Engineered a multiplayer game with advanced OOPs principles, improvising performance through a multi-threaded client-server model leveraging UDP.",
-        tags: [
-            {name: "Java", color: "blue-text-gradient"},
-            {name: "UDP", color: "green-text-gradient"},
-            {name: "Multithreading", color: "pink-text-gradient"},
-            {name: "OOP", color: "pink-text-gradient"},
-        ],
-        image: termpw,
-        source_code_link: "https://github.com/17YuvrajSehgal/VillageWar",
+        image: newsHubCover,
+        source_code_link: "https://github.com/17YuvrajSehgal/NewsHub",
     },
 ];

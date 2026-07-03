@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Agentic incident triage project cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0a1f"/>
+      <stop offset="1" stop-color="#151030"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- service graph, root cause highlighted -->
+  <g stroke="#37325a" stroke-width="2">
+    <line x1="150" y1="120" x2="320" y2="90"/>
+    <line x1="150" y1="120" x2="290" y2="220"/>
+    <line x1="320" y1="90" x2="480" y2="140"/>
+    <line x1="290" y1="220" x2="480" y2="140"/>
+    <line x1="290" y1="220" x2="420" y2="290"/>
+    <line x1="480" y1="140" x2="620" y2="200"/>
+    <line x1="420" y1="290" x2="620" y2="200"/>
+  </g>
+  <g>
+    <circle cx="150" cy="120" r="16" fill="#211e35" stroke="#6c63a8" stroke-width="2"/>
+    <circle cx="320" cy="90" r="16" fill="#211e35" stroke="#6c63a8" stroke-width="2"/>
+    <circle cx="290" cy="220" r="16" fill="#211e35" stroke="#6c63a8" stroke-width="2"/>
+    <circle cx="420" cy="290" r="16" fill="#211e35" stroke="#6c63a8" stroke-width="2"/>
+    <circle cx="620" cy="200" r="16" fill="#211e35" stroke="#6c63a8" stroke-width="2"/>
+    <!-- root cause -->
+    <circle cx="480" cy="140" r="18" fill="#915eff"/>
+    <circle cx="480" cy="140" r="30" fill="none" stroke="#915eff" stroke-width="2" opacity="0.5"/>
+    <circle cx="480" cy="140" r="44" fill="none" stroke="#915eff" stroke-width="1.5" opacity="0.25"/>
+  </g>
+  <!-- ReAct loop -->
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#aaa6c3">
+    <path d="M640 80 a34 34 0 1 1 -10 66" fill="none" stroke="#00cea8" stroke-width="2.5"/>
+    <path d="M624 141 l6 10 l-14 2 z" fill="#00cea8"/>
+    <text x="676" y="104">reason</text>
+    <text x="676" y="124">act</text>
+    <text x="676" y="144">observe</text>
+  </g>
+  <rect x="56" y="24" rx="14" width="230" height="28" fill="none" stroke="#915eff" stroke-width="1.5"/>
+  <text x="171" y="43" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#b9a8f5">LANGGRAPH · ReAct AGENT</text>
+  <text x="56" y="392" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">Agentic Incident Triage</text>
+  <text x="56" y="422" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#aaa6c3">Logs + telemetry + Jira history → automated root cause</text>
+</svg>

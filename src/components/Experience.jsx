@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
-import { experiences, technologies, frameworks } from "../constants";
+import { experiences, technologies } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Tilt } from "react-tilt";
 
-const TechIcon = ({ index, name, icon }) => (
+const TechIcon = ({ index, name, icon, Icon, color }) => (
   <motion.div
     className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
     initial="hidden"
@@ -33,12 +33,20 @@ const TechIcon = ({ index, name, icon }) => (
     }}
   >
     <div className="w-full h-full rounded-full flex justify-center items-center bg-tertiary cursor-pointer hover:shadow-card transition-all duration-300">
-      <img 
-        src={icon} 
-        alt={name} 
-        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-contain"
-        loading="lazy"
-      />
+      {Icon ? (
+        <Icon
+          aria-label={name}
+          style={{ color }}
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16"
+        />
+      ) : (
+        <img
+          src={icon}
+          alt={name}
+          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 object-contain"
+          loading="lazy"
+        />
+      )}
     </div>
     <p className="text-center text-secondary mt-2 text-[10px] sm:text-[12px] md:text-[14px]">{name}</p>
   </motion.div>
