@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="LMAT project cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0a1f"/>
+      <stop offset="1" stop-color="#151030"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00cea8"/>
+      <stop offset="1" stop-color="#915eff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- log lines with attended tokens -->
+  <g rx="6">
+    <rect x="60" y="72" width="330" height="22" rx="8" fill="#211e35"/>
+    <rect x="150" y="72" width="70" height="22" rx="8" fill="#915eff" opacity="0.85"/>
+    <rect x="60" y="116" width="470" height="22" rx="8" fill="#211e35"/>
+    <rect x="300" y="116" width="90" height="22" rx="8" fill="#00cea8" opacity="0.75"/>
+    <rect x="60" y="160" width="410" height="22" rx="8" fill="#211e35"/>
+    <rect x="60" y="204" width="520" height="22" rx="8" fill="#211e35"/>
+    <rect x="430" y="204" width="80" height="22" rx="8" fill="#915eff" opacity="0.85"/>
+    <rect x="60" y="248" width="290" height="22" rx="8" fill="#211e35"/>
+    <rect x="96" y="248" width="64" height="22" rx="8" fill="#00cea8" opacity="0.75"/>
+  </g>
+  <!-- adaptive sampling pulse -->
+  <polyline fill="none" stroke="url(#accent)" stroke-width="3" stroke-linecap="round"
+    points="600,270 620,270 632,150 648,330 664,110 680,300 692,270 740,270"/>
+  <circle cx="664" cy="110" r="6" fill="#00cea8"/>
+  <rect x="56" y="24" rx="14" width="248" height="28" fill="none" stroke="#00cea8" stroke-width="1.5"/>
+  <text x="180" y="43" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#8fe6d4">JSS 2026 · LLMs FOR SYSTEMS</text>
+  <text x="56" y="392" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">LMAT</text>
+  <text x="56" y="422" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#aaa6c3">Adaptive tracing via language-model behavior analysis</text>
+</svg>

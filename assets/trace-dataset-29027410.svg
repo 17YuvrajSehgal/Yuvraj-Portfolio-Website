@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Microservice trace dataset project cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d0a1f"/>
+      <stop offset="1" stop-color="#151030"/>
+    </linearGradient>
+    <linearGradient id="cyl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#915eff"/>
+      <stop offset="1" stop-color="#bf61ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- microservice mesh -->
+  <g fill="#37325a">
+    <circle cx="90" cy="90" r="7"/><circle cx="170" cy="70" r="7"/><circle cx="250" cy="100" r="7"/>
+    <circle cx="120" cy="170" r="7"/><circle cx="210" cy="160" r="7"/><circle cx="300" cy="170" r="7"/>
+    <circle cx="90" cy="250" r="7"/><circle cx="180" cy="240" r="7"/><circle cx="270" cy="255" r="7"/>
+  </g>
+  <g stroke="#37325a" stroke-width="1.5">
+    <line x1="90" y1="90" x2="170" y2="70"/><line x1="170" y1="70" x2="250" y2="100"/>
+    <line x1="90" y1="90" x2="120" y2="170"/><line x1="120" y1="170" x2="210" y2="160"/>
+    <line x1="210" y1="160" x2="250" y2="100"/><line x1="210" y1="160" x2="300" y2="170"/>
+    <line x1="120" y1="170" x2="90" y2="250"/><line x1="180" y1="240" x2="210" y2="160"/>
+    <line x1="180" y1="240" x2="270" y2="255"/><line x1="270" y1="255" x2="300" y2="170"/>
+  </g>
+  <!-- flow into database -->
+  <path d="M330 165 L430 165 M420 155 L430 165 L420 175" stroke="#00cea8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- db cylinders -->
+  <g>
+    <ellipse cx="540" cy="110" rx="80" ry="20" fill="url(#cyl)"/>
+    <rect x="460" y="110" width="160" height="120" fill="#211e35"/>
+    <ellipse cx="540" cy="230" rx="80" ry="20" fill="#211e35"/>
+    <path d="M460 110 v120 M620 110 v120" stroke="#915eff" stroke-width="2"/>
+    <ellipse cx="540" cy="150" rx="80" ry="20" fill="none" stroke="#37325a" stroke-width="2"/>
+    <ellipse cx="540" cy="190" rx="80" ry="20" fill="none" stroke="#37325a" stroke-width="2"/>
+  </g>
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#aaa6c3">
+    <text x="668" y="128">traces</text>
+    <text x="668" y="168">logs</text>
+    <text x="668" y="208">metrics</text>
+  </g>
+  <rect x="56" y="24" rx="14" width="310" height="28" fill="none" stroke="#00cea8" stroke-width="1.5"/>
+  <text x="211" y="43" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#8fe6d4">DeathStarBench · TrainTicket · GCP</text>
+  <text x="56" y="392" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">Microservice Trace Dataset</text>
+  <text x="56" y="422" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#aaa6c3">Large-scale trace &amp; log corpora for AIOps research</text>
+</svg>
