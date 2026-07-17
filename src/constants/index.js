@@ -144,6 +144,7 @@ export const experiences = [
         date: "May 2023 - Aug 2023",
         points: [
             "Engineered Python ETL/data pipelines to ingest, transform, validate, and reconcile operational data feeds, cutting manual file handling by 20%.",
+            "Migrated and transformed up to 350 billion rows of data from Databricks to AlloyDB through large-scale data pipelines, improving query performance by 10x.",
             "Built the bank's LMS platform with a responsive ReactJS frontend and Node.js/REST backend microservices, deployed to GCP Cloud Run with Firestore persistence.",
             "Delivered a JUnit/Jest/React Testing Library test suite, raising coverage 15% to meet the bank's 85% mandate.",
         ],
