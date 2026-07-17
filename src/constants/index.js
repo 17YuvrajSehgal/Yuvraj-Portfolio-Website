@@ -170,7 +170,7 @@ export const publications = [
         badge: "FSE 2026",
         description:
             "A diffusion-based framework that generates synthetic kernel traces to augment limited real data for downstream ML tasks — modeling traces as multi-channel sequences with a Transformer-based denoising diffusion process and constraint-guided repair to enforce system invariants.",
-        link: "",
+        link: "https://dl.acm.org/doi/10.1145/3803437.3805222",
     },
     {
         title: "LMAT: An Adaptive Tracing Approach Based on Efficient System Behavior Analysis Using Language Models",
@@ -228,6 +228,7 @@ export const projects = [
         ],
         image: traceSynthCover,
         source_code_link: "https://github.com/17YuvrajSehgal/SyntheticLogGeneration",
+        paper_link: "https://dl.acm.org/doi/10.1145/3803437.3805222",
     },
     {
         name: "LMAT — Adaptive Tracing with LLMs",
