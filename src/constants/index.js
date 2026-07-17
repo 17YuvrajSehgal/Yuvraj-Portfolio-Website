@@ -175,12 +175,12 @@ export const publications = [
     {
         title: "LMAT: An Adaptive Tracing Approach Based on Efficient System Behavior Analysis Using Language Models",
         authors: "K. Darvishi, M. Noferesti, Y. Sehgal, N. Ezzati-Jivan",
-        venue: "Journal of Systems and Software (JSS)",
+        venue: "Journal of Systems and Software, Vol. 238, Art. 112890 (2026)",
         publisher: "Elsevier",
         badge: "JSS 2026",
         description:
-            "An adaptive tracing approach that uses language models to analyze system behavior efficiently — recording detailed traces only when behavior shifts, minimizing overhead.",
-        link: "https://www.sciencedirect.com/science/article/pii/S0164121226001238",
+            "A language-model-based adaptive tracing framework for host-level observability: a multi-task model jointly predicts kernel event sequences and classifies event durations, raising trace granularity only when live traces deviate from predictions — cutting trace volume by 70.6% and reaching up to 97.7% accuracy in anomaly detection and root-cause identification.",
+        link: "https://doi.org/10.1016/j.jss.2026.112890",
     },
 ];
 
@@ -233,7 +233,7 @@ export const projects = [
     {
         name: "LMAT — Adaptive Tracing with LLMs",
         description:
-            "Adaptive tracing approach that uses language models for efficient system-behavior analysis, recording detailed traces only during significant behavioral shifts. Published in JSS (2026).",
+            "Language-model-based adaptive tracing that predicts kernel event sequences and raises trace granularity only on deviations — cutting trace volume by 70.6%. Published in JSS, Vol. 238 (2026).",
         tags: [
             {name: "LLMs", color: "blue-text-gradient"},
             {name: "Systems", color: "green-text-gradient"},
@@ -241,7 +241,7 @@ export const projects = [
         ],
         image: lmatCover,
         source_code_link: "https://github.com/17YuvrajSehgal/adaptive_tracer",
-        paper_link: "https://www.sciencedirect.com/science/article/pii/S0164121226001238",
+        paper_link: "https://doi.org/10.1016/j.jss.2026.112890",
     },
     {
         name: "Agentic Incident Triage",
