@@ -92,7 +92,7 @@ export const experiences = [
         company_name: "Brock University · Mitacs Accelerate fellowship with Ciena",
         icon: brocku,
         iconBg: "#161329",
-        date: "Feb 2026 - Present",
+        date: "Sep 2025 - Present",
         points: [
             "TraceSynth: developed constraint-guided diffusion models for generating production-quality Linux kernel traces across multiple trace channels — published at ACM FSE 2026 (Industry Track).",
             "Developed and evaluated Transformer-based denoising diffusion models for synthetic system-trace generation, achieving 87.2% F1-Macro on downstream system-diagnostic classification and improving performance by 104% at 4,096-token sequence length compared with shorter-context generation.",
@@ -107,7 +107,7 @@ export const experiences = [
         company_name: "Mengalo",
         icon: mengalo,
         iconBg: "#161329",
-        date: "Aug 2024 - Dec 2025",
+        date: "Sep 2024 - Sep 2025",
         points: [
             "Designed, developed, and deployed production AI services and REST APIs using Python and FastAPI, containerized with Docker and deployed on GCP for business and customer-engagement automation.",
             "Built an LLM- and RAG-powered analytics platform using LangChain and Neo4j, combining natural-language querying, retrieval, and knowledge-graph representations to interact with operational data.",
@@ -120,7 +120,7 @@ export const experiences = [
         company_name: "Brock University",
         icon: brocku,
         iconBg: "#161329",
-        date: "Jan 2024 - Jan 2025",
+        date: "Jan 2024 - Dec 2024",
         points: [
             "Developed AURA (AI-powered Unified Research Artifact Evaluation), an AI-driven pipeline for automated evaluation and analysis of research artifacts using Python, LLMs, OpenAI APIs, LangGraph, Neo4j, and vector search.",
             "Designed an end-to-end RAG and knowledge-graph architecture combining semantic retrieval, structured artifact metadata, and LLM-based reasoning to automate evidence extraction and artifact evaluation across 2,000+ research artifacts from 40 conferences.",
