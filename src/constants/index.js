@@ -1,6 +1,7 @@
 import {
     SiApacheairflow,
     SiApachespark,
+    SiDatabricks,
     SiFastapi,
     SiGooglecloud,
     SiKubernetes,
@@ -81,6 +82,7 @@ export const technologies = [
     {name: "Google Cloud", Icon: SiGooglecloud, color: "#4285F4"},
     {name: "Apache Airflow", Icon: SiApacheairflow, color: "#017CEE"},
     {name: "Apache Spark", Icon: SiApachespark, color: "#E25A1C"},
+    {name: "Databricks", Icon: SiDatabricks, color: "#FF3621"},
     {name: "Selenium", icon: selenium},
 ];
 
@@ -92,23 +94,25 @@ export const experiences = [
         iconBg: "#161329",
         date: "Feb 2026 - Present",
         points: [
-            "TraceSynth: developed constraint-guided diffusion models that generate production-quality Linux kernel traces — accepted at FSE 2026 (Industry Track).",
-            "LMAT: contributed to an adaptive tracing approach for efficient system-behavior analysis using language models — published in the Journal of Systems and Software (JSS, 2026).",
-            "Built an agentic incident-triage system (LangGraph + hypothesis-driven ReAct loop) correlating logs, telemetry, and historical Jira data for automated root-cause diagnosis.",
-            "Curated large-scale microservice trace/log datasets from benchmark systems (DeathStarBench, TrainTicket) on GCP for AIOps research.",
+            "TraceSynth: developed constraint-guided diffusion models for generating production-quality Linux kernel traces across multiple trace channels — published at ACM FSE 2026 (Industry Track).",
+            "Developed and evaluated Transformer-based denoising diffusion models for synthetic system-trace generation, achieving 87.2% F1-Macro on downstream system-diagnostic classification and improving performance by 104% at 4,096-token sequence length compared with shorter-context generation.",
+            "Applied constraint-guided repair to enforce structural and system-level trace validity, improving downstream performance by up to 4.3 percentage points; investigated reduced-channel models that retained 97-99% of full-channel performance at substantially lower computational cost.",
+            "LMAT: contributed to an adaptive tracing framework using language models for efficient system-behavior analysis — published in the Journal of Systems and Software (2026).",
+            "Built an agentic incident-triage system using LangGraph, ReAct, LLM-based reasoning, telemetry, logs, and historical Jira data to support automated root-cause diagnosis and incident retrieval.",
+            "Curated and processed large-scale microservice trace and log datasets from DeathStarBench and TrainTicket on GCP to support AIOps, incident analysis, and machine-learning research.",
         ],
     },
     {
-        title: "AI Developer",
+        title: "AI/ML Engineer",
         company_name: "Mengalo",
         icon: mengalo,
         iconBg: "#161329",
         date: "Aug 2024 - Dec 2025",
         points: [
-            "Built and deployed production AI services and REST APIs (Python, FastAPI) on Docker and GCP for business and customer-engagement automation.",
-            "Designed an LLM- and RAG-powered analytics chatbot (LangChain, Neo4j) for real-time, natural-language querying over operational data.",
-            "Built a full-stack AI inbox for automated, agentic message generation with a FastAPI backend and React frontend.",
-            "Designed an automated pipeline for cleaning and transforming data from PostgreSQL into a Neo4j knowledge graph, powering NLP and prompt-engineering workflows.",
+            "Designed, developed, and deployed production AI services and REST APIs using Python and FastAPI, containerized with Docker and deployed on GCP for business and customer-engagement automation.",
+            "Built an LLM- and RAG-powered analytics platform using LangChain and Neo4j, combining natural-language querying, retrieval, and knowledge-graph representations to interact with operational data.",
+            "Developed NLP and LLM pipelines for prompt engineering, information extraction, semantic processing, and knowledge-graph construction, integrating AI capabilities into production backend services.",
+            "Designed data-processing workflows connecting application data, PostgreSQL, and Neo4j to support reliable retrieval and AI-driven analytics while maintaining controlled database access patterns.",
         ],
     },
     {
@@ -118,10 +122,34 @@ export const experiences = [
         iconBg: "#161329",
         date: "Jan 2024 - Jan 2025",
         points: [
-            "Built an artifact-documentation tool (Python OOP, OpenAI API, Neo4j) that analyzes conference acceptance probabilities and cut documentation time by ~90%.",
-            "Created an open-source dataset of 2,000+ research artifacts across 40 conferences, projected to improve research efficiency by ~30%.",
-            "Sole departmental recipient of the Match of Minds research scholarship.",
-            "Conducted empirical research on the capability of generative AI to evaluate software artifacts.",
+            "Developed AURA (AI-powered Unified Research Artifact Evaluation), an AI-driven pipeline for automated evaluation and analysis of research artifacts using Python, LLMs, OpenAI APIs, LangGraph, Neo4j, and vector search.",
+            "Designed an end-to-end RAG and knowledge-graph architecture combining semantic retrieval, structured artifact metadata, and LLM-based reasoning to automate evidence extraction and artifact evaluation across 2,000+ research artifacts from 40 conferences.",
+            "Built automated data-ingestion and document-processing pipelines to extract and normalize 30,000+ Markdown documents, transforming unstructured research artifacts into searchable representations for downstream AI analysis.",
+            "Developed reusable evaluation workflows for extracting artifact capabilities, requirements, and supporting evidence, enabling systematic analysis of research reproducibility and artifact quality.",
+        ],
+    },
+    {
+        title: "Data Engineer",
+        company_name: "Scotiabank",
+        icon: scotiabank,
+        iconBg: "#161329",
+        date: "May 2024 - Aug 2024",
+        points: [
+            "Built an end-to-end Databricks-to-AlloyDB migration pipeline for up to 350 billion rows, covering data extraction, transformation, validation, loading, reconciliation, and performance optimization — improved downstream query performance by approximately 10x.",
+            "Designed and implemented an incremental data-processing pipeline that reduced daily Databricks processing time from approximately 6 hours to 2 hours, cutting compute usage and accelerating downstream data availability.",
+            "Developed and maintained production Apache Airflow DAGs in Astronomer for scheduled and incremental data workflows, integrating Databricks jobs, GCP Cloud Storage buckets, and downstream processing stages.",
+            "Worked with Databricks Unity Catalog for governed data access and pipeline management, and supported production deployments through CI/CD workflows while maintaining scheduled Databricks jobs and data pipelines.",
+        ],
+    },
+    {
+        title: "Full Stack Developer",
+        company_name: "Scotiabank",
+        icon: scotiabank,
+        iconBg: "#161329",
+        date: "May 2023 - Aug 2023",
+        points: [
+            "Built and deployed the bank's LMS platform using React, Node.js, REST-based backend microservices, Firestore, and GCP Cloud Run.",
+            "Developed automated JUnit, Jest, and React Testing Library coverage, increasing test coverage by 15 percentage points to meet the bank's 85% quality mandate.",
         ],
     },
     {
@@ -129,35 +157,12 @@ export const experiences = [
         company_name: "Scotiabank",
         icon: scotiabank,
         iconBg: "#161329",
-        date: "May 2024 - Aug 2024",
-        points: [
-            "Built Android test automation for 15+ scenarios (Java, Selenium, Appium), cutting testing time by over 75% for financial applications.",
-            "Developed reusable UI/API automation libraries (Selenium, RestAssured) and an HTML/CSS reporting module, cutting validation time by ~50%.",
-            "Collaborated with the business QA team to design test scenarios aligned with business requirements.",
-        ],
-    },
-    {
-        title: "Full Stack Developer (AI & Data Systems)",
-        company_name: "Scotiabank",
-        icon: scotiabank,
-        iconBg: "#161329",
-        date: "May 2023 - Aug 2023",
-        points: [
-            "Migrated and transformed up to 350 billion rows of data from Databricks to AlloyDB through large-scale data pipelines, improving query performance by 10x.",
-            "Engineered Python ETL/data pipelines to ingest, transform, validate, and reconcile operational data feeds, cutting manual file handling by 20%.",
-            "Built the bank's LMS platform with a responsive ReactJS frontend and Node.js/REST backend microservices, deployed to GCP Cloud Run with Firestore persistence.",
-            "Delivered a JUnit/Jest/React Testing Library test suite, raising coverage 15% to meet the bank's 85% mandate.",
-        ],
-    },
-    {
-        title: "QA Automation Engineer (AI & Data Systems)",
-        company_name: "Scotiabank",
-        icon: scotiabank,
-        iconBg: "#161329",
         date: "Sep 2022 - Dec 2022",
         points: [
-            "Automated 35+ regression scenarios for front-office financial systems (Selenium, Cucumber BDD, Java), reducing manual testing effort by ~70%.",
-            "Integrated test suites into CI/CD with Jenkins, Git, and Bitbucket for automated deployments and code review.",
+            "Automated 35+ regression scenarios for front-office financial systems using Java, Selenium, and Cucumber BDD, reducing manual testing effort by approximately 70%.",
+            "Integrated automated test suites into Jenkins CI/CD workflows using Git and Bitbucket to support continuous validation and code review.",
+            "Built automated Android and API test suites using Java, Selenium, Appium, and RestAssured, covering 15+ scenarios and reducing testing time by over 75%.",
+            "Developed reusable API automation and reporting components, reducing validation time by approximately 50%.",
         ],
     },
 ];
@@ -213,7 +218,6 @@ export const awards = [
     "Mitacs Accelerate Fellowship — Ciena ($10K)",
     "Graduate Research Funding ($29,348)",
     "Match of Minds Scholarship — sole departmental recipient",
-    "Golden Key International Honour Society (top 15%)",
     "Brock Entrance Scholarship ($6K)",
 ];
 

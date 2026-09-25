@@ -6,7 +6,7 @@ import {fadeIn, textVariant} from '../utils/motion';
 import GitHubContributions from "./GitHubContributions.jsx";
 
 const highlights = [
-    {value: "2+", label: "years of production experience"},
+    {value: "4+", label: "years of software engineering experience"},
     {value: "2", label: "peer-reviewed publications (FSE · JSS)"},
     {value: "$45K+", label: "research funding & scholarships"},
     {value: "5", label: "industry roles across AI, data & QA"},
@@ -24,15 +24,15 @@ const About = () => {
                 variants={fadeIn('', '', 0.1, 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
-                I'm a Computer Science M.Sc. researcher and software engineer with 2+ years
-                of production experience across AI services, full-stack development, data
-                pipelines, and QA automation at Scotiabank and Mengalo. My current research —
-                a Mitacs Accelerate industrial fellowship with Ciena — applies machine
-                learning to systems, with peer-reviewed papers at FSE 2026 and the Journal of
-                Systems and Software on generating and analyzing kernel traces with diffusion
-                models and LLMs. I specialize in AI/ML (deep learning, NLP, LLMs, RAG, and
-                agents), data-intensive backends, and reliable automation with Python, SQL,
-                and cloud infrastructure.
+                I'm an AI/ML engineer and Computer Science M.Sc. researcher with 4+ years of
+                software engineering experience spanning production AI systems, deep learning,
+                LLM/RAG applications, data-intensive backends, and AI for systems — across
+                roles at Scotiabank and Mengalo. My current research — a Mitacs Accelerate
+                industrial fellowship with Ciena — applies machine learning to systems, with
+                peer-reviewed papers at ACM FSE and the Journal of Systems and Software on
+                generating and analyzing kernel traces with diffusion models and LLMs. I build
+                end-to-end ML and AI solutions with Python, PyTorch, NLP, LLMs,
+                LangChain/LangGraph, knowledge graphs, and cloud infrastructure.
             </motion.p>
 
             <motion.div

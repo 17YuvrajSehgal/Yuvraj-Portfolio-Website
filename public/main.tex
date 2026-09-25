@@ -1,21 +1,21 @@
 \documentclass[10pt,letterpaper]{extarticle}
 
 % ----------------------------------------------------------------------
-%  PACKAGES
+% PACKAGES
 % ----------------------------------------------------------------------
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[scaled=0.96]{helvet}        % clean Helvetica/Arial-style sans-serif
+\usepackage[scaled=0.96]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
+
 \usepackage[top=0.5in,bottom=0.5in,left=0.6in,right=0.6in]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
-\usepackage{array}
 \usepackage[hidelinks]{hyperref}
 
 % ----------------------------------------------------------------------
-%  COLOURS
+% COLOURS
 % ----------------------------------------------------------------------
 \definecolor{ink}{HTML}{1A1A1A}
 \definecolor{accent}{HTML}{1F3B5B}
@@ -23,138 +23,234 @@
 \definecolor{rule}{HTML}{C9D2DC}
 
 \color{ink}
-\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent
+}
 
 % ----------------------------------------------------------------------
-%  LAYOUT
+% LAYOUT
 % ----------------------------------------------------------------------
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \linespread{1.03}
 \pagestyle{empty}
+\setlength{\emergencystretch}{1.5em}
 
-\setlist[itemize]{leftmargin=1.15em, topsep=2pt, partopsep=0pt, itemsep=1.8pt, parsep=0pt, label=\textcolor{accent}{\small\textbullet}}
+\setlist[itemize]{
+  leftmargin=1.15em,
+  topsep=2pt,
+  partopsep=0pt,
+  itemsep=1.8pt,
+  parsep=0pt,
+  label=\textcolor{accent}{\small\textbullet}
+}
 
 \titleformat{\section}
   {\color{accent}\bfseries\fontsize{11.5}{13}\selectfont}
-  {}{0pt}{}[\vspace{1.5pt}{\color{rule}\titlerule[1.1pt]}\vspace{3pt}]
+  {}{0pt}{}
+  [\vspace{1.5pt}{\color{rule}\titlerule[1.1pt]}\vspace{3pt}]
+
 \titlespacing*{\section}{0pt}{7pt}{0pt}
 
 % ----------------------------------------------------------------------
-%  ENTRY MACROS
+% ENTRY MACROS
 % ----------------------------------------------------------------------
 \newcommand{\entry}[2]{%
   \vspace{2.5pt}%
-  \noindent\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
-  \textbf{#1} & {\color{muted}\small #2}\\
-  \end{tabular*}\par\vspace{-1pt}%
+  \noindent
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & {\color{muted}\small #2} \\
+  \end{tabular*}
+  \par\vspace{-1pt}%
 }
-\newcommand{\meta}[1]{{\color{muted}\small #1}\par\vspace{1pt}}
+
+\newcommand{\meta}[1]{%
+  {\color{muted}\small #1}\par\vspace{1pt}%
+}
 
 % ======================================================================
 \begin{document}
 
 % ---------------------------- HEADER ----------------------------------
 \begin{center}
-  {\color{accent}\fontsize{20}{23}\selectfont\bfseries Yuvraj Sehgal}\\[3pt]
-  {\small
-   St.\ Catharines, ON, Canada
-   \;\textbullet\; 437-335-5700
-   \;\textbullet\; \href{mailto:17yuvraj.sehgal@gmail.com}{17yuvraj.sehgal@gmail.com}}\\[2pt]
-  {\small
-   \href{https://github.com/17YuvrajSehgal}{github.com/17YuvrajSehgal}
-   \;\textbullet\; \href{https://www.linkedin.com/in/yuvraj-sehgal/}{linkedin.com/in/yuvraj-sehgal}
-   \;\textbullet\; \href{https://17yuvrajsehgal.github.io/Yuvraj-Portfolio-Website/}{Portfolio}}
+{\color{accent}\fontsize{20}{23}\selectfont\bfseries Yuvraj Sehgal}\\[3pt]
+
+{\small
+Toronto, ON, Canada
+\;\textbullet\;
+437-335-5700
+\;\textbullet\;
+\href{mailto:17yuvraj.sehgal@gmail.com}{17yuvraj.sehgal@gmail.com}
+}\\[2pt]
+
+{\small
+\href{https://github.com/17YuvrajSehgal}{github.com/17YuvrajSehgal}
+\;\textbullet\;
+\href{https://www.linkedin.com/in/yuvraj-sehgal/}{linkedin.com/in/yuvraj-sehgal}
+\;\textbullet\;
+\href{https://17yuvrajsehgal.github.io/Yuvraj-Portfolio-Website/}{Portfolio}
+}
 \end{center}
 
 \vspace{-2pt}
 
 % ---------------------------- SUMMARY ---------------------------------
 {\small
-Computer Science MSc researcher and software engineer with 2+ years of production experience across AI services, full-stack development, data pipelines, and QA automation at Scotiabank and Mengalo. Sole recipient of the Match of Minds research scholarship and author of two peer-reviewed papers (FSE, JSS) on machine learning for systems. Specializes in AI/ML (deep learning, NLP, LLM/RAG), data-intensive backends, and reliable automation with Python, SQL, and cloud infrastructure.}
+\textbf{AI/ML Engineer and M.Sc.\ Computer Science researcher} with 4+ years of software engineering experience spanning production AI systems, deep learning, LLM/RAG applications, data-intensive backends, and AI for systems. Author of peer-reviewed research published at ACM FSE and the \textit{Journal of Systems and Software}. Experienced in building end-to-end ML and AI solutions using Python, PyTorch, NLP, LLMs, LangChain/LangGraph, knowledge graphs, and cloud infrastructure.\par}
 
 % --------------------------- SKILLS -----------------------------------
 \section{Technical Skills}
+
 {\small
-\textbf{Languages:} Python, Java, SQL, JavaScript/TypeScript, Go, Bash\\
-\textbf{AI \& ML:} PyTorch, TensorFlow, scikit-learn, Hugging Face, deep learning, NLP, LLM fine-tuning, prompt engineering, LangChain, LangGraph, RAG\\
-\textbf{Data \& Analytics:} ETL/ELT, dimensional modeling, dbt, Databricks, Apache Airflow, Apache Spark, Pandas, NumPy, MapReduce, data warehousing\\
-\textbf{Databases:} PostgreSQL, AlloyDB, MongoDB, Firestore, Neo4j (knowledge graphs)\\
-\textbf{Cloud \& DevOps:} GCP (Cloud Run, Compute Engine), Docker, Kubernetes, Terraform, CI/CD (Jenkins, Git, Bitbucket)\\
-\textbf{Web \& Testing:} React, Node.js, FastAPI, Spring Boot, REST APIs, Selenium, Appium, RestAssured, Cucumber/BDD, JUnit, Jest, OpenTelemetry}
+\textbf{Languages:}
+Python, SQL, Java, JavaScript/TypeScript, Bash\\
+\textbf{AI \& Machine Learning:}
+PyTorch, TensorFlow, scikit-learn, Hugging Face, deep learning, NLP, LLMs, LLM fine-tuning, prompt engineering, RAG, LangChain, LangGraph\\
+\textbf{ML \& AI Systems:}
+Agentic AI, ReAct, knowledge graphs, model inference, AI-assisted root-cause analysis, anomaly detection, synthetic data generation, diffusion models\\
+\textbf{Data Engineering:}
+Apache Spark, Databricks, Apache Airflow, dbt, Pandas, NumPy, ETL/ELT, data pipelines, dimensional modeling, data warehousing, MapReduce\\
+\textbf{Databases:}
+PostgreSQL, AlloyDB, MongoDB, Firestore, Neo4j\\
+\textbf{Cloud \& Infrastructure:}
+GCP (Cloud Run, Compute Engine), Docker, Kubernetes, Terraform, CI/CD, Jenkins, Git, Bitbucket\\
+\textbf{Backend \& APIs:}
+FastAPI, Node.js, Spring Boot, REST APIs\\
+\textbf{Testing \& Observability:}
+JUnit, Jest, Selenium, Appium, RestAssured, Cucumber/BDD, React Testing Library, OpenTelemetry\par
+}
 
 % --------------------------- EDUCATION --------------------------------
 \section{Education}
 
-\entry{M.Sc.\ Computer Science \textnormal{\textbar} Brock University}{Sept 2025 -- Sept 2027 (expected)}
-\meta{Thesis-based; research in AI for systems and trustworthy, responsible AI. \,\textbar\, St.\ Catharines, ON}
+\entry{M.Sc.\ Computer Science \textnormal{\textbar} Brock University}
+{Sept 2025 -- Sept 2027 (expected)}
+\meta{Thesis-based; research in AI for systems and trustworthy, responsible AI \,\textbar\, St.\ Catharines, ON}
 
-\entry{B.Sc.\ (Honours) Computer Science, Intelligent Systems \textnormal{\textbar} Brock University}{Jan 2021 -- Jan 2025}
-\meta{GPA 87/100 \,\textbar\, Dean's Honour List (all years) \,\textbar\, Golden Key International Honour Society}
+\entry{B.Sc.\ (Honours) Computer Science, Intelligent Systems \textnormal{\textbar} Brock University}
+{Jan 2021 -- Jan 2025}
+\meta{GPA: 87/100 \,\textbar\, Dean's Honour List (all years) \,\textbar\, Golden Key International Honour Society}
 
 % ------------------------- EXPERIENCE ---------------------------------
 \section{Experience}
 
-\entry{Artificial Intelligence Researcher \textnormal{\textbar} Brock University}{Feb 2026 -- Present}
+\entry{Artificial Intelligence Researcher \textnormal{\textbar} Brock University}
+{Feb 2026 -- Present}
 \meta{Mitacs Accelerate industrial fellowship with Ciena Corp. \,\textbar\, St.\ Catharines, ON}
+
 \begin{itemize}
-  \item \textbf{TraceSynth}: developed constraint-guided diffusion models that generate production-quality Linux kernel traces; published at \textit{FSE 2026 (Industry Track)}.
-  \item \textbf{LMAT}: contributed to an adaptive tracing approach for efficient system-behavior analysis using language models; published in the \textit{Journal of Systems and Software (2026)}.
-  \item Built an agentic incident-triage system (LangGraph + hypothesis-driven ReAct loop) correlating logs, telemetry, and historical Jira data for automated root-cause diagnosis.
-  \item Curated large-scale microservice trace/log datasets from benchmark systems (DeathStarBench, TrainTicket) on GCP for AIOps research.
+\item \textbf{TraceSynth:} Developed constraint-guided diffusion models for generating production-quality Linux kernel traces across multiple trace channels; published at \textit{ACM FSE 2026 (Industry Track)}.
+
+\item Developed and evaluated Transformer-based denoising diffusion models for synthetic system-trace generation, achieving \textbf{87.2\% F1-Macro} on downstream system-diagnostic classification and improving performance by \textbf{104\%} at 4,096-token sequence length compared with shorter-context generation.
+
+\item Applied constraint-guided repair to enforce structural and system-level trace validity, improving downstream performance by up to \textbf{4.3 percentage points}; investigated reduced-channel models that retained \textbf{97--99\%} of full-channel performance at substantially lower computational cost.
+
+\item \textbf{LMAT:} Contributed to an adaptive tracing framework using language models for efficient system-behavior analysis; published in the \textit{Journal of Systems and Software (2026)}.
+
+\item Built an agentic incident-triage system using \textbf{LangGraph, ReAct, LLM-based reasoning, telemetry, logs, and historical Jira data} to support automated root-cause diagnosis and incident retrieval.
+
+\item Curated and processed large-scale microservice trace and log datasets from \textbf{DeathStarBench and TrainTicket} on GCP to support AIOps, incident analysis, and machine-learning research.
 \end{itemize}
 
-\entry{AI Developer \textnormal{\textbar} Mengalo}{Aug 2024 -- Dec 2025}
-\meta{Canada}
+\entry{AI/ML Engineer \textnormal{\textbar} Mengalo}
+{Aug 2024 -- Dec 2025}
+\meta{Toronto, ON}
+
 \begin{itemize}
-  \item Built and deployed production AI services and REST APIs (Python, FastAPI) on Docker and GCP for business and customer-engagement automation.
-  \item Designed an LLM- and RAG-powered analytics chatbot (LangChain, Neo4j) for real-time, natural-language querying over operational data.
-  \item Implemented NLP, prompt-engineering, and knowledge-graph extraction pipelines to drive innovation across teams.
+\item Designed, developed, and deployed production \textbf{AI services and REST APIs} using Python and FastAPI, containerized with Docker and deployed on GCP for business and customer-engagement automation.
+
+\item Built an \textbf{LLM- and RAG-powered analytics platform} using LangChain and Neo4j, combining natural-language querying, retrieval, and knowledge-graph representations to interact with operational data.
+
+\item Developed NLP and LLM pipelines for \textbf{prompt engineering, information extraction, semantic processing,} and \textbf{knowledge-graph construction}, integrating AI capabilities into production backend services.
+
+\item Designed data-processing workflows connecting application data, PostgreSQL, and Neo4j to support reliable retrieval and AI-driven analytics while maintaining controlled database access patterns.
 \end{itemize}
 
-\entry{Research Assistant \textnormal{\textbar} Brock University}{Jan 2024 -- Jan 2025}
+\newpage
+\entry{Research Assistant \textnormal{\textbar} Brock University}
+{Jan 2024 -- Jan 2025}
 \meta{St.\ Catharines, ON}
+
 \begin{itemize}
-  \item Built an artifact-documentation tool (Python OOP, OpenAI API, Neo4j) that analyzes conference acceptance probabilities and cut documentation time by $\sim$90\%.
-  \item Created an open-source dataset of 2{,}000+ research artifacts across 40 conferences (projected $\sim$30\% research-efficiency gain); sole departmental recipient of the Match of Minds scholarship.
+\item Developed \textbf{AURA (AI-powered Unified Research Artifact Evaluation)}, an AI-driven pipeline for automated evaluation and analysis of research artifacts using \textbf{Python, LLMs, OpenAI APIs, LangGraph, Neo4j, and vector search}.
+
+\item Designed an end-to-end \textbf{RAG and knowledge-graph architecture} combining semantic retrieval, structured artifact metadata, and LLM-based reasoning to automate evidence extraction and artifact evaluation across \textbf{2,000+ research artifacts from 40 conferences}.
+
+\item Built automated data-ingestion and document-processing pipelines to extract and normalize \textbf{30,000+ Markdown documents}, transforming unstructured research artifacts into searchable representations for downstream AI analysis.
+
+\item Developed reusable evaluation workflows for extracting artifact capabilities, requirements, and supporting evidence, enabling systematic analysis of research reproducibility and artifact quality.
 \end{itemize}
 
-\entry{QA Automation Engineer \textnormal{\textbar} Scotiabank}{May -- Aug 2024}
+
+\entry{Data Engineer \textnormal{\textbar} Scotiabank}
+{May -- Aug 2024}
 \meta{Toronto, ON}
+
 \begin{itemize}
-  \item Built Android test automation for 15+ scenarios (Java, Selenium, Appium), cutting testing time by over 75\% for financial applications.
-  \item Developed API automation libraries (Selenium, RestAssured) and HTML/CSS reporting, cutting validation time $\sim$50\%.
+\item Built an end-to-end \textbf{Databricks-to-AlloyDB migration pipeline} for up to \textbf{350 billion rows}, covering data extraction, transformation, validation, loading, reconciliation, and performance optimization; improved downstream query performance by approximately \textbf{10x}.
+
+\item Designed and implemented an \textbf{incremental data-processing pipeline} that reduced daily Databricks processing time from approximately \textbf{6 hours to 2 hours}, cutting compute usage and accelerating downstream data availability.
+
+\item Developed and maintained production \textbf{Apache Airflow DAGs in Astronomer} for scheduled and incremental data workflows, integrating Databricks jobs, GCP Cloud Storage buckets, and downstream processing stages.
+
+\item Worked with \textbf{Databricks Unity Catalog} for governed data access and pipeline management, and supported production deployments through \textbf{CI/CD} workflows while maintaining scheduled Databricks jobs and data pipelines.
 \end{itemize}
 
-\entry{Full Stack Developer \textnormal{\textbar} Scotiabank}{May -- Aug 2023}
+
+\entry{Full Stack Developer \textnormal{\textbar} Scotiabank}
+{May -- Aug 2023}
 \meta{Toronto, ON}
+
 \begin{itemize}
-  \item Engineered Python ETL/data pipelines to ingest, transform, validate, and reconcile operational data feeds, cutting manual file handling by 20\% and improving data reliability and reproducibility.
-  \item Migrated and transformed up to 350 billion rows of data from Databricks to AlloyDB through large-scale data pipelines, improving query performance by 10x.
-  \item Built the bank's LMS platform with a responsive ReactJS frontend and Node.js/REST backend microservices, deployed to GCP Cloud Run with Firestore persistence.
-  \item Delivered a JUnit/Jest/React Testing Library test suite, raising coverage 15\% to meet the bank's 85\% mandate.
+\item Built and deployed the bank's LMS platform using React, Node.js, REST-based backend microservices, Firestore, and GCP Cloud Run.
+
+\item Developed automated JUnit, Jest, and React Testing Library coverage, increasing test coverage by \textbf{15 percentage points} to meet the bank's 85\% quality mandate.
 \end{itemize}
 
-\entry{QA Automation Engineer \textnormal{\textbar} Scotiabank}{Sept -- Dec 2022}
+\entry{QA Automation Engineer \textnormal{\textbar} Scotiabank}
+{Sept -- Dec 2022}
 \meta{Toronto, ON}
+
 \begin{itemize}
-  \item Automated 35+ regression scenarios for front-office financial systems (Selenium, Cucumber BDD, Java), reducing manual testing effort $\sim$70\%.
-  \item Integrated suites into CI/CD with Jenkins, Git, and Bitbucket for automated deployments and code review.
+\item Automated 35+ regression scenarios for front-office financial systems using \textbf{Java, Selenium, and Cucumber BDD}, reducing manual testing effort by approximately \textbf{70\%}.
+
+\item Integrated automated test suites into \textbf{Jenkins CI/CD} workflows using Git and Bitbucket to support continuous validation and code review.
+
+\item Built automated Android and API test suites using \textbf{Java, Selenium, Appium, and RestAssured}, covering 15+ scenarios and reducing testing time by over \textbf{75\%}.
+
+\item Developed reusable API automation and reporting components, reducing validation time by approximately \textbf{50\%}.
 \end{itemize}
 
 % ------------------------- PUBLICATIONS -------------------------------
 \section{Publications}
-{\small
-\textbf{Y. Sehgal}, S. Patel, M. Panahandeh, N. Ezzati-Jivan, F. Tetreault. \enspace TraceSynth: Generating Production-Quality Kernel Traces with Constraint-Guided Diffusion Models. \textit{FSE Companion '26 (Industry Track), ACM, pp.\ 496--506.}\\
-{\color{muted}\href{https://doi.org/10.1145/3803437.3805222}{doi.org/10.1145/3803437.3805222}}\\[2.5pt]
-K. Darvishi, M. Noferesti, \textbf{Y. Sehgal}, N. Ezzati-Jivan. \enspace LMAT: An Adaptive Tracing Approach Based on Efficient System Behavior Analysis Using Language Models. \textit{Journal of Systems and Software, vol.\ 238, art.\ 112890, Elsevier, 2026.}\\
-{\color{muted}\href{https://doi.org/10.1016/j.jss.2026.112890}{doi.org/10.1016/j.jss.2026.112890}}}
 
-% ------------------- CERTIFICATIONS + ADDITIONAL ----------------------
-\section{Certifications \& Additional}
 {\small
-\textbf{Certifications:} OAuth2 \& OpenID Connect \,\textbullet\, Java EE: Servlets \& JSP \,\textbullet\, SSL Certificates for Web Developers \,\textbullet\, Maven Fundamentals \,\textbullet\, Unit Testing with Jasmine\\[2pt]
-\textbf{Awards:} Mitacs Accelerate Fellowship (Ciena, \$10K) \,\textbullet\, Graduate Research Funding (\$29{,}348) \,\textbullet\, Match of Minds Scholarship (sole departmental recipient) \,\textbullet\, Golden Key (top 15\%) \,\textbullet\, Brock Entrance Scholarship (\$6K)\\[2pt]
-\textbf{Also:} TA --- COSC 3P97 Mobile Computing \& 3P95 Software Analysis \& Testing (2025--26) \,\textbullet\, Indian citizen w/ Canadian study permit \,\textbullet\, English, Hindi.}
+\textbf{Y. Sehgal}, S. Patel, M. Panahandeh, N. Ezzati-Jivan, F. Tetreault.
+\textbf{TraceSynth: Generating Production-Quality Kernel Traces with Constraint-Guided Diffusion Models.}
+\textit{ACM FSE Companion '26, Industry Track}, ACM, pp.\ 496--506.
+\href{https://doi.org/10.1145/3803437.3805222}{DOI: 10.1145/3803437.3805222}\\[4pt]
+K. Darvishi, M. Noferesti, \textbf{Y. Sehgal}, N. Ezzati-Jivan.
+\textbf{LMAT: An Adaptive Tracing Approach Based on Efficient System Behavior Analysis Using Language Models.}
+\textit{Journal of Systems and Software}, vol.\ 238, art.\ 112890, Elsevier, 2026.
+\href{https://doi.org/10.1016/j.jss.2026.112890}{DOI: 10.1016/j.jss.2026.112890}\par
+}
+
+% ------------------------- AWARDS -------------------------------------
+\section{Awards \& Leadership}
+
+{\small
+\textbf{Research Funding \& Awards:}
+Mitacs Accelerate Industrial Fellowship with Ciena (\$10K)
+\;\textbullet\;
+Graduate Research Funding (\$29,348)
+\;\textbullet\;
+Match of Minds Research Scholarship (sole departmental recipient)
+\;\textbullet\;
+Brock Entrance Scholarship (\$6K)\\[2pt]
+\textbf{Teaching:}
+Teaching Assistant --- COSC 3P97 Mobile Computing \& COSC 3P95 Software Analysis \& Testing (2025--26)\\[2pt]
+}
 
 \end{document}
